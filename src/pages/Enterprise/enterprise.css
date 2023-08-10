@@ -1,0 +1,213 @@
+.features_sec{
+    background-color:#09182c;
+}
+
+.features_sec .content_sec{
+    padding:50px 0px;
+}
+.features_sec .content_sec .flap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding:50px 0px;
+    opacity:0.3;
+}
+
+.features_sec .content_sec .flap .text_wrap h2{
+    color:#fff;
+}
+.features_sec .content_sec .flap .text_wrap{
+    display: flex;
+    flex-direction: column;justify-content: center;
+    padding:50px 50px;
+}
+.features_sec .content_sec .flap .text_wrap p{
+    color:#fff;
+    font-size:20px;
+    line-height: 29px;
+    margin-top:20px;
+}
+.features_sec .content_sec .flap .text_wrap.pl{
+    padding-left:50px;
+}
+.features_sec .content_sec .flap .text_wrap.pr{
+    padding-right:50px;
+}
+
+.features_sec .content_sec .flap .video_wrap{
+
+}
+
+.features_sec .content_sec .flap .video_wrap video.img_video{
+    width:100%;
+}
+
+.enterprise_landing .text_wraper {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .enterprise_landing  .text-intro {
+    margin: 0 0 100px 0;
+  }
+
+  .enterprise_landing  p.para {
+    font-size: 22px;
+    line-height: 31px;
+    font-weight: 500;
+    text-align: center;
+    white-space: pre-wrap;
+  }
+  
+  .enterprise_landing .text_wraper h1 {
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .enterprise_landing .text_wraper p.para {
+    font-size: 22px;
+    line-height: 31px;
+    font-weight: 500;
+    text-align: center;
+    white-space: pre-wrap;
+  }
+  
+  .enterprise_landing .tri_grid {
+    background-color: #09192d;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 70px 20px;
+    margin-top: 100px;
+  }
+  .enterprise_landing .tri_grid .part {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 50px;
+  }
+  
+  .enterprise_landing .tri_grid .part.mid {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
+  
+  .enterprise_landing .tri_grid .part h3 {
+    color: #fff;
+    margin: 20px 0px;
+  }
+  
+  .enterprise_landing .tri_grid .part p {
+    color: #fff;
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    .enterprise_landing .tri_grid {
+      padding: 50px 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .enterprise_landing .text_wraper h1 {
+      font-size: 44px;
+      line-height: 50px;
+    }
+    .enterprise_landing .text_wraper p.para {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .enterprise_landing .tri_grid{
+      display: flex;
+      flex-direction: column;
+      gap:50px;
+      padding:50px;
+  }
+  .enterprise_landing .tri_grid .part{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .enterprise_landing .tri_grid .part.mid{
+      border-right: none;
+      border-left: none;
+      border-top:1px solid #fff;
+      border-bottom:1px solid #fff;
+      padding:50px 0px;
+  }
+  .enterprise_landing .tri_grid .part h3{
+      text-align: center;
+      margin:15px 0px;
+  }
+  .enterprise_landing .tri_grid .part p{
+      text-align: center;
+  }
+  }
+  @media only screen and (max-width: 767px){
+      .enterprise_landing .tri_grid{
+          padding:50px 20px;
+      }
+  }
+  @media only screen and (max-width: 500px) {
+    .enterprise_landing .text_wraper h1 {
+      font-size: 38px;
+      line-height: 43px;
+    }
+  
+    .enterprise_landing .text_wraper p.para {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+  @media only screen and (max-width:600px){
+    .enterprise_landing .text_wraper {
+      margin-top: 60px;
+    }
+    .enterprise_landing .tri_grid{
+      margin-top:60px;
+    }
+  }
+
+@media only screen and (max-width:900px){
+    .features_sec .content_sec .flap{
+        display:flex;
+        flex-direction: column;
+        align-items:center;  
+        padding:50px 0px;
+       }
+       .features_sec .content_sec .flap.center{
+        display:flex;
+        flex-direction: column-reverse;
+        align-items:center;  
+       }
+
+    .features_sec .content_sec .flap .text_wrap h2{
+        text-align: center;
+    }
+    .features_sec .content_sec .flap .text_wrap p{
+        text-align: center;
+        font-size:18px;
+        line-height:26px;
+
+    }
+    .features_sec .content_sec .flap .video_wrap video.img_video{
+        max-width:450px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .features_sec .content_sec .flap .text_wrap{
+        padding:40px 15px;
+    }
+
+    .features_sec .content_sec .flap .text_wrap.pl{
+        padding:50px 15px;
+    }
+    .features_sec .content_sec .flap .text_wrap.pr{
+        padding:50px 15px;
+    }
+}

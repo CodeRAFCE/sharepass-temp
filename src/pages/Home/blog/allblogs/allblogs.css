@@ -1,0 +1,108 @@
+.blog_grid{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap:30px;
+}
+
+.blog_grid .blog{
+    padding:40px;
+    background-color:#fff;
+    transition:all 0.3s ease-in-out;
+    position:relative;
+    overflow: hidden;
+}
+
+.blog_grid .blog h3{
+    margin:20px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog_grid .blog .date_line{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blog_grid .blog .img_wrap{
+    width:100%;
+    margin-top:50px;
+}
+
+
+.blog_grid .blog .img_wrap img{
+    width:100%;
+}
+
+.blog_grid .blog .learn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:15px;    
+    margin-top:10px;
+opacity:0;
+transition:all 0.3s ease-in-out;
+}
+.blog_grid .blog .learn p{
+    color:#ffffff;
+    font-size:16px;
+    line-height: 24px;
+}
+
+.blog_grid .blog .date_line button{
+    padding:8px 12px;
+    font-size:12px;
+    list-style:12px;
+    text-transform: capitalize;
+    background-color:#7829f9;
+    color:#ffffff;
+    border-style: none;
+    margin-right:10px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    transition:all 0.3s ease-in-out;
+}
+
+.blog_grid .blog .date_line p.date{
+    font-size:15px;
+    font-weight:700;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    transition:all 0.3s ease-in-out;
+}
+.blog_grid .blog:hover .overlay{
+    top:0%;
+}
+.blog_grid .blog .overlay{
+    background-color:#09182c;
+}
+
+.blog_grid .blog:hover .overlay button{
+    background-color:#02f3a2;
+    color:#09182c;
+}
+.blog_grid .blog:hover .overlay p.date{
+    color:#fff;
+}
+
+.blog_grid .blog:hover .overlay h3{
+    color:#fff;
+}
+
+.blog_grid .blog:hover .overlay .learn{
+    opacity: 1;
+}
+
+.blog_grid .blog .overlay{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:100%;
+    left:0px;
+    transition:all 0.3s ease-in-out; padding:40px;
+}
+
+.blog_grid .blog .overlay .more_wrap{
+    position: absolute;
+    left:40px;
+    bottom:30px;
+}

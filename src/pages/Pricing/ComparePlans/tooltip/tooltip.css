@@ -1,0 +1,5 @@
+.tip_wrap{
+    display: grid;
+    place-items: center;
+    min-width:60px;
+}

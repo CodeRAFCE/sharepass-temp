@@ -1,0 +1,147 @@
+
+.find_plan{
+    background-color:#09182c;
+    padding:100px 0px;
+}
+
+.find_plan .grids_sec{
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;;
+    gap:100px;
+    position:relative;
+}
+
+.find_plan .grids_sec .left{
+    position:relative;
+    padding-bottom:50px;
+}
+
+.find_plan .grids_sec .left .wrap{
+    position:sticky;
+    top:200px;
+}
+
+.find_plan .grids_sec .left .wrap button{
+    height:52px;
+    width:200px;
+    padding:15px;
+    background-color:#02f3a2;
+    color:#09182c;
+    font-size:16px;
+    font-weight:700;
+    line-height:16px;
+    border-style: none;
+    transition:all 0.2s ease-in-out;  
+    margin-top:20px;  
+}
+.find_plan .grids_sec .left .wrap button:hover{
+    background-color:#fff;
+}
+
+.find_plan .grids_sec .right{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+
+}
+
+.find_plan .grids_sec .left p.text{
+    color:#fff;
+    margin-top:20px;
+}
+
+.find_plan .grids_sec .left h2{
+    color:#fff;
+}
+
+.find_plan .grids_sec .right .block{
+    padding:40px;
+    border:2px solid #556072;
+}
+
+.find_plan .grids_sec .right .block h3{
+    color:#fff;
+    margin-top:24px;
+}
+
+.find_plan .grids_sec .right .block p{
+    color:#fff;
+    margin-top:24px;
+    font-size:18px;
+    line-height:25px;
+    font-weight:500;
+    letter-spacing: 0.36px;
+}
+.find_plan .grids_sec .right .block img{
+    height:64px;
+    width:64px;
+}
+
+@media only screen and (max-width:1000px){
+    .find_plan .grids_sec{
+        gap:50px;
+    }
+    .find_plan .grids_sec .right .block{
+        padding:32px;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .find_plan{
+        padding:60px 0px;
+    }
+    .find_plan .grids_sec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:40px;
+    }
+    .find_plan .grids_sec .left{
+        padding-bottom:0px;
+    }
+    .find_plan .grids_sec .left .wrap{
+        position:static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .find_plan .grids_sec .left p.text{
+        text-align: center;
+    }
+    .find_plan .grids_sec .left h2{
+        text-align: center;
+    }
+    .find_plan .grids_sec .right{
+        gap:20px;
+    }
+    .find_plan .grids_sec .right .block{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .find_plan .grids_sec .right .block h3{
+        text-align: center;
+        margin-top:12px;
+    }
+    .find_plan .grids_sec .right .block p{
+        text-align: center;
+        font-size:16px;
+        font-weight:500;
+        line-height: 22px;
+        letter-spacing: 0.32px;
+        margin-top:12px;
+    }
+    .find_plan .grids_sec .right .block img{
+        margin:0px auto;
+    }
+    
+}
+
+@media only screen and (max-width:500px){
+    .find_plan .grids_sec .left .wrap button{
+        width:100%;
+    }
+    .find_plan .grids_sec .right .block{
+        padding:20px 15px;
+    }
+}

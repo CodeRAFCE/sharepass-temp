@@ -1,0 +1,114 @@
+.leaders {
+  padding-top: 0px;
+  position: relative;
+}
+
+.leaders img.bgimg{
+  position:absolute;
+  left:0px;
+  top:150px;
+  transform: translateX(-40%);
+}
+
+.leaders .img_grid {
+  padding: 80px 0px; 
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  gap:50px;
+}
+
+.leaders .img_grid .leader .img_wrap {
+  border: 4px solid #7829f9;
+  position: relative;
+  overflow: hidden;
+  padding:0px;  
+}
+
+.leaders .img_grid .leader .img_wrap img {
+  width: 100%;
+  margin:0px;
+  object-fit:cover;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.03);
+}
+
+.leaders .img_grid .leader .img_wrap .imglayer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(2, 244, 162, 0%);
+  transition: all 0.3s ease-in-out;
+}
+
+.leaders .img_grid .leader:hover .imglayer {
+  background-color: rgba(2, 244, 162, 24%);
+}
+
+.leaders .img_grid .leader:hover img {
+  transform: scale(1.08);
+}
+
+.leaders .img_grid .leader .details_text {
+  padding: 15px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leaders .img_grid .leader .details_text p.nametext {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.leaders .img_grid .leader .details_text p.post {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #556072;
+  text-transform: capitalize;
+}
+
+.leaders .img_grid .leader .details_text a.ln {
+  height: 40px;
+  width: 40px;
+  display: block;
+  background-image: url("../../../assets/images/linkedin.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+}
+.leaders .img_grid .leader .details_text a.ln:hover {
+  background-image: url("../../../assets/images/greenlinkedin.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 900px) {
+  .leaders .img_grid {
+    gap: 40px;
+  }
+  .leaders H2{
+    text-align:center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .leaders {
+    padding-top: 60px;
+  }
+  .leaders .img_grid {
+    padding: 60px 0px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

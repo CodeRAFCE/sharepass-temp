@@ -1,0 +1,86 @@
+.terms_landing{
+background-color:#09182c;
+padding:150px 0px;
+position:relative;
+margin-bottom:100px;
+}
+
+.terms_landing .time{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:10px;
+}
+
+.terms_landing .time p{
+    color:#fff;
+}
+.terms_landing h1{
+    color:#fff;
+    margin:20px 0px 40px;
+    text-transform: capitalize;
+}
+
+.terms_landing .link_wrap{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap:50px;
+    position: relative;
+z-index: 1;
+}
+
+.terms_landing .link_wrap .tab{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.terms_landing .link_wrap .tab p{
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    margin-right:15px;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+.terms_landing .link_wrap .tab span{
+    height:30px;
+    width:30px;
+    background-color:#7829f9;
+    display: grid;
+    place-items: center;
+    transition: all 0.2s linear;
+}
+
+.terms_landing .link_wrap .tab:hover p{
+    color:#7829f9;
+}
+.terms_landing .link_wrap .tab:hover span{
+    transform: translateX(8px);
+}
+
+
+
+.terms_landing svg.bg{
+position:absolute;
+bottom:0px;
+right:0px;
+z-index: 0;
+}
+
+@media only screen and (max-width:900px){
+    .terms_landing .link_wrap{
+        gap:40px;
+    }
+
+    .terms_landing{     
+        padding:100px 0px;
+    }
+
+    .terms_landing h1{
+        margin:15px 0px 25px;
+    }    
+}

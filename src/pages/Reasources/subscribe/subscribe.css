@@ -1,0 +1,111 @@
+.subscribe {
+    margin-bottom: 100px;
+}
+
+.subscribe .square{
+    border:16px solid #7829f9;
+    padding:50px 200px;
+    background-color:#02f3a2;
+    position:relative;
+}
+
+.subscribe .square img{
+    height:150px;
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+
+.subscribe .square h2{
+    text-align: center;
+    font-size:52px;
+    line-height:72px;
+    font-weight:600px;
+}
+
+.subscribe .square .field_wrap{
+    height:70px;
+    padding:4px;
+    background-color:#fff;
+    margin-top:65px;
+    display: flex;
+    align-items: center;
+}
+
+.subscribe .square .field_wrap input{
+    height:100%;
+    width:calc(100% - 180px);
+    background-color:#fff;
+    outline: none;
+    border-style: none;
+    padding:20px;
+    font-size:16px;
+    line-height: 24px;
+    font-weight:400;
+    color:#000;
+}
+
+.subscribe .square .field_wrap input::placeholder{
+    color:rgb(121, 121, 121);
+}
+
+.subscribe .square .field_wrap button{
+    height:100%;
+    width:180px;
+    background-color:#09182c;
+    color:#fff;
+    border-style: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+.subscribe .square .field_wrap button:hover{
+    background-color: #7829f9;
+}
+
+@media only screen and (max-width:1150px){
+    .subscribe .square{
+        padding:50px 100px;
+    }
+  
+}
+
+@media only screen and (max-width:900px){
+    .subscribe .square{
+        padding:50px 15px;
+    }
+    .subscribe .square h2{
+        font-size:40px;
+        line-height:45px;
+    }
+    .subscribe .square img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .subscribe .square .field_wrap{
+        height:auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subscribe .square .field_wrap input{
+        width:100%;
+        padding:20px 15px;
+    }
+    .subscribe .square .field_wrap button{
+        width:100%;
+        height:40px;
+    }
+    .subscribe .square h2{
+        font-size:31px;
+        line-height:35px;
+    }
+    .subscribe .square .field_wrap{
+        margin-top:40px;
+    }
+
+}

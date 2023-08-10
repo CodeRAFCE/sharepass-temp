@@ -1,0 +1,26 @@
+.blog_sec{
+    margin:100px 0px;
+}
+
+.blog_sec .blog_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.blog_sec .blog_title button{
+    padding:16px 32px;
+    border:2px solid #7829f9;
+    color:#7829f9;
+    font-size: 16px;
+    font-weight:700;
+    width:180px;
+    transition:all 0.2s ease-in-out;
+    background-color: transparent;
+}
+
+.blog_sec .blog_title button:hover{
+    background-color:#7829f9;
+    color:#fff;
+}

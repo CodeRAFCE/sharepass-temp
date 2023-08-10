@@ -1,0 +1,221 @@
+.resource_stepper {
+  margin: 100px 0px;
+}
+
+.resource_stepper .step_grid {
+  display: flex;
+  gap: 24px;
+}
+
+.resource_stepper .step_grid .step_sec {
+  width: 300px;
+  position: relative;
+}
+
+.resource_stepper .step_grid .sec_content {
+  width: calc(100% - 324px);
+}
+
+.resource_stepper .step_grid .step_sec .step_block {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  position: sticky;
+  top:100px;
+}
+
+.resource_stepper .step_grid .step_sec .step_block button {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-style: none;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  border: 4px solid #fff;
+}
+.resource_stepper .step_grid .step_sec .step_block button span {
+  height: 8px;
+  width: 8px;
+  display: block;
+  background-color: #02f3a2;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.resource_stepper .step_grid .step_sec .step_block button:hover {
+  background-color: #7829f9;
+  color: #fff;
+}
+
+.resource_stepper .step_grid .step_sec .step_block button.active {
+  background-color: #7829f9;
+  color: #fff;
+  border: 4px solid #ffffffaf;
+}
+
+.resource_stepper .step_grid .step_sec .step_block button.active span {
+  opacity: 1;
+}
+
+.resource_stepper .step_grid .sec_content .sec .cards_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 80px 0px;
+}
+
+.resource_stepper .step_grid .sec {
+  padding-bottom: 100px;
+  border-bottom: 1px solid #d2d5de;
+  margin-bottom: 60px;
+}
+
+.resource_stepper .step_grid .sec_content .sec p.notice {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 60px;
+}
+.resource_stepper .step_grid .sec_content .sec .btn_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resource_stepper .step_grid .sec_content .sec .btn_wrap button {
+  padding: 16px;
+  border: 2px solid #7829f9;
+  color: #7829f9;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  width: 200px;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+
+.resource_stepper .step_grid .sec_content .sec .btn_wrap button:hover {
+  background-color: #7829f9;
+  color: #fff;
+}
+
+.resource_stepper .step_grid .sec_content .sec .event_card {
+  border: 2px solid #02f3a2;
+  padding: 50px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #09182c;
+  margin-top: 20px;
+}
+
+.resource_stepper .step_grid .sec_content .sec .event_card .event_link {
+ text-align: center;
+}
+
+.resource_stepper .step_grid .sec_content .sec .event_card .text_wrap h3 {
+  color: #fff;
+}
+
+.resource_stepper .step_grid .sec_content .sec .event_card .text_wrap p {
+  color: #fff;
+  margin-top:15px;
+}
+
+.resource_stepper .step_grid .sec_content .sec .event_card .text_wrap small {
+  color: #fff;
+  margin-top:15px;
+}
+
+.resource_stepper .step_grid .sec_content .sec .event_card a {
+  display: block;
+  padding: 16px;
+  color: #09182c;
+  background-color: #02f3a2;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  letter-spacing: 0.32px;
+  text-transform: capitalize;
+  width: 150px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.resource_stepper .step_grid .sec_content .sec .event_card a:hover {
+  background-color: #f1f3f9;
+}
+
+.resource_stepper .events-container {
+  padding: 80px 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .resource_stepper .step_grid .sec_content .sec .cards_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .resource_stepper {
+    margin: 60px 0px;
+  }
+  .resource_stepper .step_grid {
+    gap: 0px;
+  }
+  .resource_stepper .step_grid .step_sec {
+    display: none;
+  }
+  .resource_stepper .step_grid .sec_content {
+    width: 100%;
+  }
+  .resource_stepper .step_grid .sec_content .sec .cards_grid {
+    padding: 40px 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) {  
+  .resource_stepper .step_grid .sec_content .sec .event_card{
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    padding:30px;
+  }
+  .resource_stepper .step_grid .sec_content .sec .event_card .text_wrap{
+    padding:0px;
+  }
+  .resource_stepper .step_grid .sec_content .sec .event_card .text_wrap p{
+    text-align: center;
+  }
+  .resource_stepper .step_grid .sec_content .sec .event_card .text_wrap h3{
+    text-align: center;
+  }
+  .resource_stepper .step_grid .sec_content .sec .event_card a{
+    width:200px;
+  }
+  .resource_stepper .step_grid .sec{
+    padding-bottom:60px;
+  }
+}
+
+
+@media only screen and (max-width: 1100px) {  
+  .events-container-resources .event_card .event_inner_card{
+    display: block!important;
+  }
+
+  .events-container-resources .event_card .event_inner_card .image_wrap {
+    padding-right: 0;
+  }
+
+  .events-container-resources .event_card .event_inner_card .image_wrap img{
+    margin-bottom: 50px;
+    max-width: 100%;
+  }
+}

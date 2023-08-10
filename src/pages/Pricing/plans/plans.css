@@ -1,0 +1,215 @@
+.plans {
+    background-color: #fff;
+    padding: 0px 0px 100px 0px;
+}
+
+.plans .switch_line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom:60px;
+}
+
+.plans .switch_line button {
+  height: 38px;
+  width: 70px;
+  padding: 6px;
+  border-radius: 80px;
+  background-color: transparent;
+  border: 1px solid #bbb;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.3s ease-in-out;
+}
+
+.plans .switch_line p{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.plans .switch_line button.active {
+  justify-content: flex-end;
+  background-color: #7829f9;
+  transition: all 0.3s ease-in-out;
+  border-style: none;
+}
+
+.plans .switch_line p.active {
+  color: #7829f9;
+}
+
+.plans .switch_line button span {
+  display: block;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #bbb;
+  transition: all 0.3s ease-in-out;
+}
+
+.plans .switch_line button span.active {
+  background-color: #fff;
+}
+
+.plans .all_plans{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:20px;
+}
+
+.plans .all_plans .plan{
+    padding:40px 25px;
+    background-color:#f1f3f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plans .all_plans .plan.lightbg{
+    background-color:#fff;
+}
+
+.plans .all_plans .plan h6{
+    font-size:19px;
+    line-height: 26px;
+    font-weight: 500;
+    color:#7829f9;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom:15px;
+}
+
+.plans .all_plans .plan h3{
+    font-size:38px;
+    line-height: 45px;
+    font-weight: 500;
+    color:#000000;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.plans .all_plans .plan h3.capit{
+    text-transform: capitalize;
+}
+.plans .all_plans .plan button.planbtn{
+    background-color:#02f3a2;
+    border-style: none;
+    transition: all 0.3s ease-in-out;
+    padding:14px;
+    text-align: center;
+    font-size:16px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color:#000;
+    margin-top:50px;
+}
+.plans .all_plans .plan .text p.tag{
+    text-align: center;
+    font-size:14px;
+    line-height: 22px;
+    font-weight:600;
+    margin-top:5px;
+    color:#000;
+}
+
+.plans .all_plans .plan button.planbtn:hover{
+    background-color:#fff;
+}
+
+.plans .all_plans .plan p{
+    font-size:16px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    color:#000;
+}
+
+.plans .all_plans .plan p.center{
+    text-align: center;
+}
+
+.plans .all_plans .plan .mid_text{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    margin:40px 0px 10px;
+    height:150px;
+}
+.plans .all_plans .plan .mid_text p.center{
+    padding:10px 0px;
+    font-size:14px;
+    line-height:24px;
+    font-weight:400;
+    text-align: center;
+}
+
+.plans .all_plans .plan .text p.mid{
+    border-bottom:1px solid #00000051;
+    padding:10px 0px;
+    font-size:14px;
+    line-height:24px;
+    font-weight:400;
+    text-align: center;
+    padding-bottom:40px;
+}
+
+.plans .all_plans .plan .text p.features{
+    border-bottom:1px solid #00000051;
+    padding:10px 0px;
+    font-size:14px;
+    line-height:24px;
+    font-weight:400;
+    text-align: left;
+}
+
+.plans p.bottom{
+    text-align: center;
+    font-size:16px;
+    line-height: 28px;
+    font-weight: 500;
+    margin:40px 0px;
+}
+
+@media only screen and (max-width:1100px){
+    .plans .all_plans{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .plans p.bottom{
+        margin:40px 0px 0px;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .plans{
+        padding:60px 0px;
+     }
+    .plans .all_plans{
+        grid-template-columns: 1fr;
+    }
+    .plans .switch_line{
+        justify-content: center;
+        gap:10px;
+    }
+    .plans .switch_line button {
+        height: 30px;
+        width: 60px;
+        padding:5px;
+    }
+    .plans .switch_line button span{
+        height:20px;
+        width:20px;
+    }
+    .plans .switch_line p{
+        font-size:14px;
+    }
+}

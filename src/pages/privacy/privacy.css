@@ -1,0 +1,28 @@
+.privacy {
+  padding-bottom: 60px;
+}
+
+.privacy h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.privacy p {
+  margin: 20px 0px 30px;
+}
+
+.privacy .table_wrap{
+  width:100%;
+  overflow: auto;
+}
+.privacy .table_wrap table{
+  border-collapse: collapse;
+}
+
+.privacy .table_wrap table th{
+  padding:10px;
+}
+
+.privacy .table_wrap table tr td{
+  padding:10px;
+}

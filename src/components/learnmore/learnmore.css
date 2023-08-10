@@ -1,0 +1,23 @@
+.more{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:12px;
+    transition:all 0.2s linear;
+    cursor: pointer;
+}
+
+.more:hover{
+    gap:18px;
+}
+
+.more p.purpose{
+    font-size:16px;
+    line-height: 24px;
+    font-weight:600;  
+    border-bottom:1px solid #ffffff00;
+    transition:all 0.2s linear;
+}
+.more:hover p.purpose{
+    border-bottom:1px solid #fff;
+}

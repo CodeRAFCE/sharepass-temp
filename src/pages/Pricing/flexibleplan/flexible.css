@@ -1,0 +1,36 @@
+.flexible_plan{
+    padding:100px 0px;
+    background-color: #fff;;
+}
+
+.flexible_plan .bigrid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:80px;
+}
+
+.flexible_plan .bigrid .text_side h2{
+margin:0px 0px 20px;
+}
+
+@media only screen and (max-width:900px){
+    .flexible_plan .bigrid{
+        grid-template-columns: 1fr;
+    }
+    .flexible_plan .bigrid .text_side{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .flexible_plan .bigrid .text_side h2{
+      text-align: center;
+        }
+        
+     
+}
+
+@media only screen and (max-width:600px){
+    .flexible_plan{     
+        padding:60px 0px 0px;
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "status": true,
+    "data": [
+        {
+            "_id": "64a7af67c5787320bc47ec9e",
+            "name": "App",
+            "createdAt": "2023-07-07T06:23:35.077Z",
+            "updatedAt": "2023-07-07T06:23:35.077Z",
+            "__v": 0
+        },
+        {
+            "_id": "64a7b6e340780e2c340e51d8",
+            "name": "Technology",
+            "createdAt": "2023-07-07T06:55:31.290Z",
+            "updatedAt": "2023-07-07T06:55:31.290Z",
+            "__v": 0
+        }
+    ]
+}

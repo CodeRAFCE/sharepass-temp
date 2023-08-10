@@ -1,0 +1,37 @@
+.spacing{
+    height:100px;
+}
+
+.award-icon {
+    display: inline-block;
+}
+
+.award-icon .badges img {
+    vertical-align: super;
+}
+ 
+.award-icon .inner-badge {
+    max-height: 150px;
+    max-width: 100%;
+}
+
+.award-icon.award-icon-rendered img {
+    width: 150px!important;
+}
+
+.dark-text,
+.dark-text p,
+.dark-text h1,
+.dark-text h2,
+.dark-text h3 {
+    color: #09182c!important;
+}
+
+.dark-text.mb-200 {
+    margin-bottom: 200px;
+}
+@media only screen and (max-width:600px){
+    .spacing{
+        height:60px;
+    }
+}

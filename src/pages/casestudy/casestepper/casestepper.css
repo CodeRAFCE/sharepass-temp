@@ -1,0 +1,150 @@
+.case_step {
+  padding: 100px 0px;
+  background-color: #09182c;
+}
+
+.case_step .flex_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 100px;
+  position: relative;
+}
+
+.case_step .flex_box .box {
+  width: 315px;
+  padding: 20px;
+  border: 1px solid #fff;
+  position: sticky;
+  top: 100px;
+  margin-bottom:60px;
+}
+
+.case_step .flex_box .box p.step_text {
+  margin-bottom: 8px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.case_step .flex_box .box p.step_text:hover {
+  color: #02f3a2;
+}
+.case_step .flex_box .box .steps {
+  margin-top: 24px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #fff;
+}
+
+.case_step .flex_box .box button.learnbtn {
+  height: 50px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #7829f9;
+  color: #09182c;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  margin-top: 50px;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-style: none;
+}
+
+.case_step .flex_box .box button.learnbtn:hover {
+  background-color: #fff;
+  color: #09182c;
+}
+
+.case_step .flex_box .text_wrap {
+  width: calc(100% - 415px);
+}
+
+.case_step .flex_box .text_wrap h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.case_step .flex_box .text_wrap p {
+  color: #fff;
+}
+.case_step .flex_box .text_wrap p.para {
+  margin-bottom: 60px;
+}
+.case_step .flex_box .text_wrap .sub_title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.case_step .flex_box .text_wrap .sub_title h3 {
+  color: #fff;
+}
+
+.case_step .flex_box .text_wrap .solution {
+  margin-top: 100px;
+}
+.case_step .flex_box .text_wrap .solution h2 {
+  margin-bottom: 20px;
+}
+
+.case_step .flex_box .text_wrap .solution p {
+  margin-bottom: 50px;
+}
+
+.case_step .flex_box .text_wrap .result {
+  margin-top: 100px;
+}
+.case_step .flex_box .text_wrap .result h2 {
+  margin-bottom: 20px;
+}
+
+.case_step .flex_box .text_wrap .result .block {
+  margin-top: 50px;
+}
+
+.case_step .flex_box .text_wrap .result .block h3 {
+  margin: 15px 0px 20px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+  .case_step .flex_box {
+    gap: 0px;
+  }
+  .case_step .flex_box .box {
+    display: none;
+  }
+  .case_step .flex_box .text_wrap {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .case_step {
+    padding: 60px 0px 0px;
+  }
+  .case_step p {
+    text-align: center;
+  }
+  .case_step h2 {
+    text-align: center;
+  }
+  .case_step h3 {
+    text-align: center;
+  }
+  .case_step .result .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .case_step .challenge .sub_title{
+    justify-content: center!important;
+  }
+}

@@ -1,0 +1,131 @@
+.bottom_sec {
+  background-color: #09182c;
+}
+
+.bottom_sec .content_sec .squares_wrap {
+  padding: 150px 0px;
+}
+
+.bottom_sec .content_sec .squares_wrap .outer_square {
+  background-color: #1f1b55;
+  padding: 40px;
+}
+
+.bottom_sec .content_sec .squares_wrap .outer_square .mid_square {
+  background-color: #3a1f86;
+  padding: 40px;
+}
+.bottom_sec .content_sec .squares_wrap .outer_square .mid_square .main_square {
+  background-color: #7829f9;
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom_sec
+  .content_sec
+  .squares_wrap
+  .outer_square
+  .mid_square
+  .main_square
+  h2 {
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.bottom_sec
+  .content_sec
+  .squares_wrap
+  .outer_square
+  .mid_square
+  .main_square
+  button.btns {
+  padding: 16px 48px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  border: 10px solid #a16afb;
+  transition: all 0.5s ease-in-out;
+}
+
+.bottom_sec
+  .content_sec
+  .squares_wrap
+  .outer_square
+  .mid_square
+  .main_square
+  button.btns:hover {
+  background-color: #09182c;
+  color: #fff;
+  border: 10px solid #7829f9;
+}
+
+@media only screen and (max-width: 1200px) {
+  .bottom_sec
+    .content_sec
+    .squares_wrap
+    .outer_square
+    .mid_square
+    .main_square {
+    padding: 50px;
+  }
+  .bottom_sec .content_sec .squares_wrap {
+    padding: 100px 0px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .bottom_sec .content_sec .squares_wrap .outer_square {
+    padding: 0px;
+  }
+  .bottom_sec
+    .content_sec
+    .squares_wrap
+    .outer_square
+    .mid_square
+    .main_square {
+    padding: 30px;
+  }
+  .bottom_sec
+    .content_sec
+    .squares_wrap
+    .outer_square
+    .mid_square
+    .main_square
+    h2 {
+    margin-bottom: 30px;
+  }
+  .bottom_sec
+    .content_sec
+    .squares_wrap
+    .outer_square
+    .mid_square
+    .main_square
+    button.btns {
+    padding: 12px 25px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .bottom_sec .content_sec .squares_wrap {
+    padding: 60px 0px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .bottom_sec .content_sec .squares_wrap .outer_square .mid_square {
+    padding: 20px;
+  }
+  .bottom_sec
+    .content_sec
+    .squares_wrap
+    .outer_square
+    .mid_square
+    .main_square {
+    padding: 20px;
+  }
+}

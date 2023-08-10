@@ -1,0 +1,131 @@
+.effortless{
+    margin:100px 0px;
+}
+.effortless .content_sec .grid_sec{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.effortless .content_sec h2{
+     margin-bottom:50px;
+    }
+
+.effortless .content_sec .grid_sec .text_wraper{
+    padding-right: 50px;
+    position:relative;
+    padding-top:100px;
+}
+
+
+
+.effortless .content_sec .grid_sec .text_wraper .text_block{
+    margin-top: 40px;
+    /*padding-left:50px;*/
+    position:relative;
+    transition:all 0.3s ease-in-out;
+    height:38px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.effortless .content_sec .grid_sec .text_wraper .text_block.open{
+    height:auto;
+    transition: all 0.5s ease-in-out;
+} 
+.effortless .content_sec .grid_sec .text_wraper .text_block .progress{
+    position:absolute;
+    width:4px;
+    height:100%;
+    background-color:#09182c;
+    top:0px;
+    left:0px;
+    overflow: hidden;
+    transition:all 0.3s ease-in-out    
+}
+.effortless .content_sec .grid_sec .text_wraper .text_block .progress .filler{
+    width:100%;
+    height:0%;
+    background-color:#02f3a2;
+}
+.effortless .content_sec .grid_sec .text_wraper .text_block .progress .filler.active{    
+    height:100%;
+    transition:all 7s ease-in-out;    
+}
+.effortless .content_sec .grid_sec .text_wraper .text_block p{
+margin-top: 15px;
+}
+
+
+
+.effortless .content_sec .grid_sec .video_wraper video.anim_video{
+    width:100%;
+}
+
+
+
+
+/* .......For Screen < 900px......... */
+.effortless .content_sec .grid_sec .small_text_wrap{
+    display: none;
+}
+ 
+.effortless .content_sec .grid_sec .small_text_wrap .horizontal_wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:16px;
+    margin-top:50px;
+}
+.effortless .content_sec .grid_sec .small_text_wrap .horizontal_wrap .h_progress{
+    height:3px;
+    width:100%;
+    overflow: hidden;
+    background-color:#09182c;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.effortless .content_sec .grid_sec .small_text_wrap .horizontal_wrap .h_progress .h_filler{
+    height:3px;
+    width:0%;
+    background-color:#02f3a2;
+}
+
+.effortless .content_sec .grid_sec .small_text_wrap .horizontal_wrap .h_progress .h_filler.active{
+    width:100%;
+    transition:all 7s ease-in-out;   
+}
+
+.effortless .content_sec .grid_sec .small_text_wrap .h_text_block{
+transition: all 0.5s ease-in-out;
+}
+.effortless .content_sec .grid_sec .small_text_wrap .h_text_block h3{
+    text-align: center;
+    margin-top:30px;
+}
+.effortless .content_sec .grid_sec .small_text_wrap .h_text_block p{
+    text-align: center;
+    margin-top:16px;
+}
+
+@media only screen and (max-width:900px){
+    .effortless .content_sec h2{
+       text-align: center;
+       }
+
+    .effortless .content_sec .grid_sec{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .effortless .content_sec .grid_sec .text_wraper{
+        display: none;
+    }
+    .effortless .content_sec .grid_sec .small_text_wrap{
+        display:block;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .effortless{
+        margin:60px 0px;
+    }
+}

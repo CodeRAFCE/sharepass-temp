@@ -1,0 +1,15 @@
+.tiny_title_wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom:16px;
+}
+
+.tiny_title_wrap p{
+    font-size:12px;
+    text-transform: uppercase;
+    letter-spacing: 1.68px;
+    line-height:18px;
+    margin-left:7px;
+    font-weight:600;
+}

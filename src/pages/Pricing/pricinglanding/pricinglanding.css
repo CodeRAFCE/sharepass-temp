@@ -1,0 +1,43 @@
+.price_landing{
+    background-color:#09182c;
+    padding:100px 0px;
+}
+
+.price_landing .bigrid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:80px;
+}
+
+.price_landing .bigrid .text_side h1{
+color:#ffff;
+margin:0px 0px 20px;
+}
+
+.price_landing .bigrid .text_side p{
+    color:#ffff;
+}
+
+@media only screen and (max-width:900px){
+    .price_landing .bigrid{
+        grid-template-columns: 1fr;
+    }
+    .price_landing .bigrid .text_side{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .price_landing .bigrid .text_side h1{
+      text-align: center;
+        }
+        
+        .price_landing .bigrid .text_side p{
+            text-align: center;
+        }
+}
+
+@media only screen and (max-width:600px){
+    .price_landing{     
+        padding:60px 0px;
+    }
+}
