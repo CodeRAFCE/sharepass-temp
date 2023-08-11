@@ -3,7 +3,7 @@ import http1 from "../../variables";
 import {Fragment, useRef, useEffect, useState} from "react";
 import {InView} from "react-intersection-observer";
 // import mobilePrivacy from "../../../assets/animations/Mobile-Privacy.mp4";
-import timeControlled from "../../../assets/webm/2.webm";
+import timeControlled from "../../../assets/videos/new/enterprise-solution.mp4";
 // import Lottie from "react-lottie-player";
 import {Player} from "@lottiefiles/react-lottie-player";
 
