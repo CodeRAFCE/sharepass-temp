@@ -3,12 +3,12 @@ import http1 from "../../variables";
 import {Fragment, useRef, useEffect, useState} from "react";
 import {InView} from "react-intersection-observer";
 // import mobilePrivacy from "../../../assets/animations/Mobile-Privacy.mp4";
-// import timeControlled from "../../../assets/animations/Time-Controlled-Secrets.mp4";
+import timeControlled from "../../../assets/webm/2.webm";
 // import Lottie from "react-lottie-player";
 import {Player} from "@lottiefiles/react-lottie-player";
 
 // lottie file
-import timeControlled from "../../../assets/lottie/time-controlled.json";
+// import timeControlled from "../../../assets/lottie/time-controlled.json";
 import mobilePrivacy from "../../../assets/lottie/privact-soltuion.json";
 
 const Features = (props) => {
@@ -35,8 +35,8 @@ const Features = (props) => {
 						>
 							<div className="video_wrap">
 								{/* <Lottie animationData={timeControlled} loop play /> */}
-								<Player src={timeControlled} loop autoplay />
-								{/* <video
+								{/* <Player src={timeControlled} loop autoplay /> */}
+								<video
 									className="img_video"
 									//src={`${http1}${props.image2}`}
 									src={timeControlled}
@@ -44,7 +44,7 @@ const Features = (props) => {
 									loop
 									muted
 									playsInline
-								/> */}
+								/>
 							</div>
 							<div className="text_wrap pl">
 								<h2>{props.title1}</h2>
