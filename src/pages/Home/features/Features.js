@@ -2,14 +2,16 @@ import "./features.css";
 import http1 from "../../variables";
 import {Fragment, useRef, useEffect, useState} from "react";
 import {InView} from "react-intersection-observer";
-// import mobilePrivacy from "../../../assets/animations/Mobile-Privacy.mp4";
-import timeControlled from "../../../assets/videos/new/enterprise-solution.mp4";
 // import Lottie from "react-lottie-player";
 import {Player} from "@lottiefiles/react-lottie-player";
 
+// mp4s
+import timeControlled from "../../../assets/videos/new/time-controlled.mp4";
+import mobilePrivacy from "../../../assets/videos/new/privacy-message.mp4";
+
 // lottie file
 // import timeControlled from "../../../assets/lottie/time-controlled.json";
-import mobilePrivacy from "../../../assets/lottie/privact-soltuion.json";
+//import mobilePrivacy from "../../../assets/lottie/privacy-solution.json";
 
 const Features = (props) => {
 	const [first, setFirst] = useState(false);
@@ -72,16 +74,18 @@ const Features = (props) => {
 							</div>
 
 							<div className="video_wrap">
-								<Player src={mobilePrivacy} loop autoplay />
-								{/* <video
-									className="img_video"
-									//src={`${http1}${props.image2}`}
-									src={mobilePrivacy}
-									autoPlay
-									loop
-									muted
-									playsInline
-								/> */}
+								{/*<Player src={mobilePrivacy} loop autoplay />*/}
+								{
+									<video
+										className="img_video"
+										//src={`${http1}${props.image2}`}
+										src={mobilePrivacy}
+										autoPlay
+										loop
+										muted
+										playsInline
+									/>
+								}
 							</div>
 						</div>
 					</InView>

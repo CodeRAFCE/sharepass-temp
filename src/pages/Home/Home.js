@@ -96,7 +96,8 @@ function Home() {
     Homepage();
     window.scrollTo(0, 0);
   }, []);
-console.log("home");
+  console.log("home");
+  
   return (
     <section className="home">
       <Helmet>

@@ -2,7 +2,11 @@ import './envelope.css';
 import http1 from '../../variables';
 import { Fragment, useRef, useEffect, useState } from 'react';
 import { InView } from 'react-intersection-observer';
-import envelopeVideo from "../../../assets/animations/SharePass-Envelope.mp4";
+//import envelopeVideo from "../../../assets/animations/SharePass-Envelope.mp4";
+import {Player} from "@lottiefiles/react-lottie-player";
+
+// lottie files
+import envelopeVideo from "../../../assets/lottie/privacy-solution.json";
 
 const Envelope = (props) => {
 
@@ -26,14 +30,15 @@ const Envelope = (props) => {
                                 <p>Use our envelope feature to request confidential data from third parties securely and smoothly</p>
                             </div>
                             <div className='video_wrap'>
-                                <video
+                                {/*<video
                                     className='img_video'
                                     src={envelopeVideo}
                                     autoPlay
                                     loop
                                     muted
                                     playsInline
-                                />
+                                />*/}
+                                <Player src={envelopeVideo} loop autoplay />
                             </div>
                         </div>
                     </InView>

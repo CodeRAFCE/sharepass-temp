@@ -20,30 +20,22 @@ navigate("/pricing");
                         <TinyTitle title="home" textcolor='#fff' />
                         <h2>Find Your Perfect Plan</h2>
                         <p className="text">Choose from various pricing plans with flexible options to fit your needs and budget. Our free version offers limited features, while our paid plans provide additional capabilities and customization options. Whether you're an individual or a business looking to safeguard confidential information, we have a correct pricing plan. Enjoy peace of mind knowing your data is safe and secure with our cutting-edge privacy platform.</p>
-                       <button onClick={goToPlan}>Learn more</button>
+                       
                         </div>
                     </div>
                     <div className="right">
-                        <div className="block">
-                            <img src={`${http1}${props.image1}`} alt='icon'/>
-                            <h3>{props.title1}</h3>
-                            <p>{props.para1}</p>
-                        </div>
+                        
 
                         <div className="block">
-                            <img src={`${http1}${props.image2}`} alt='icon'/>
+                            <img src={`${http1}${props.image4}`} alt='icon'/>
                             <h3>{props.title2}</h3>
                             <p>{props.para2}</p>
                         </div>
 
-                        <div className="block">
-                            <img src={`${http1}${props.image3}`} alt='icon'/>
-                            <h3>{props.title3}</h3>
-                            <p>{props.para3}</p>
-                        </div>
+                        
 
                         <div className="block">
-                            <img src={`${http1}${props.image4}`} alt='icon'/>
+                            <img src={`${http1}${props.image2}`} alt='icon'/>
                             <h3>{props.title4}</h3>
                             <p>{props.para4}</p>
                         </div>

@@ -13,7 +13,7 @@ const AllBlogs = () => {
     const [blog, setBlog] = useState([]);
 
     const blogData = async () => {
-        const res = await axios.get(`${apiBaseUrl}posts?sticky=true&_embed=wp:term`)
+        const res = await axios.get(`${apiBaseUrl}posts?sticky=true`)
             .then((response) => {
                 setBlog(response.data);
             }).catch((error) => {
@@ -39,9 +39,9 @@ const AllBlogs = () => {
     return (
         <div className="blog_grid">
             {blog && blog.map((data, j) => {
-                let category;
+                let category = 'Blog';
 
-                if(
+                /*if(
                     data._embedded && 
                     data._embedded["wp:term"] && 
                     data._embedded["wp:term"].length > 0 && 
@@ -49,7 +49,7 @@ const AllBlogs = () => {
                     data._embedded["wp:term"][0][0].name
                 ){
                     category = data._embedded["wp:term"][0][0].name;
-                }
+                }*/
 
                 return (
                     <Fragment key={data.slug}>

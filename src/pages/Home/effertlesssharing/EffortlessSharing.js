@@ -1,11 +1,13 @@
 import "./effortlesssharing.css";
 import http1 from "../../variables";
 import {useEffect, useState} from "react";
-// import video from "../../../assets/animations/Effortless-file-sharing.mp4"
 import {Player} from "@lottiefiles/react-lottie-player";
 
+// mp4s
+import video from "../../../assets/videos/new/effortless-file-sharing.mp4";
+
 // lottie files
-import video from "../../../assets/lottie/effortless-file-sharing.json";
+// import video from "../../../assets/lottie/effortless-file-sharing.json";
 
 const EffortlessSharing = (props) => {
 	/*const [active, setActive] = useState('');
@@ -71,8 +73,8 @@ const EffortlessSharing = (props) => {
 						</div>
 					</div>
 					<div className="video_wraper">
-						<Player src={video} loop autoplay />
-						{/* <video
+						{/* <Player src={video} loop autoplay /> */}
+						<video
 							className="anim_video"
 							// src={`${http1}${props.video}`}
 							src={video}
@@ -80,7 +82,7 @@ const EffortlessSharing = (props) => {
 							loop
 							muted
 							playsInline
-						/> */}
+						/>
 					</div>
 				</div>
 			</div>

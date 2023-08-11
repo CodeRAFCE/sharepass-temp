@@ -31,6 +31,7 @@ import Enterprise from './pages/Enterprise/Enterprise';
 import RegisterInterest from "./pages/RegisterInterest/RegisterInterest";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import frontendConfigApp from "./assets/js/config";
+import VerifyEmail from './pages/VerifyEmail/VerifyEmail';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
       <Route path='/blog/:id' element={<BlogDetail />} />
       <Route path='/event/:id' element={<EventDetail />} />
       <Route path='/media/:id' element={<MediaDetail />} />
+      <Route path='/validate-email/:code' element={<VerifyEmail />} />
       <Route path='/blogs' element={<BlogsList />} />
       <Route path='/events' element={<EventsList />} />
       <Route path='/medias' element={<MediasList />} />

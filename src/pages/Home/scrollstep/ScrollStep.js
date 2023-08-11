@@ -3,11 +3,13 @@ import http1 from "../../variables";
 import {useEffect, useState, useRef} from "react";
 import React, {Component} from "react";
 import Slider from "react-slick";
-// import seamlessIntegration from "../../../assets/animations/Seamless-integration.mp4";
 import {Player} from "@lottiefiles/react-lottie-player";
 
+// mp4s
+import seamlessIntegration from "../../../assets/videos/new/seamless-integration.mp4";
+
 // lottie files
-import seamlessIntegration from "../../../assets/lottie/seemless-integration.json";
+// import seamlessIntegration from "../../../assets/lottie/seemless-integration.json";
 
 const ScrollStep = (props) => {
 	const settings = {
@@ -91,15 +93,15 @@ const ScrollStep = (props) => {
 							{activeNum === 1 && false && <img alt="image" src={`${http1}${props.image1}`} />}
 							{activeNum === 2 && false && <img src={`${http1}${props.image2}`} alt="img" />}
 							{activeNum === 3 && false && <img alt="image" src={`${http1}${props.image3}`} />}
-							{/* <video
+							<video
 								id="videoScrollable"
 								// src={"/assets/videos/SharePass-Features.webm"}
 								src={seamlessIntegration}
 								autoPlay
 								loop
 								muted
-							/> */}
-							<Player src={seamlessIntegration} autoplay loop />
+							/>
+							{/* <Player src={seamlessIntegration} autoplay loop /> */}
 						</div>
 					</div>
 					<div className="steptext_wrap">

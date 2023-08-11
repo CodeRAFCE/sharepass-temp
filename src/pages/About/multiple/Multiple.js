@@ -10,11 +10,7 @@ const Multiple = ({ title, para, image }) => {
                 <h2>{title}</h2>
                 <p>{para}</p>
                 <div className="img_wrap">   
-                <img
-                    draggable="false"
-                    alt="image"
-                    src={`${http1}${image}`}
-                />
+                
                 </div>
             </div>
             <hr style={{width:"100%", margin: "50px 0"}}/>

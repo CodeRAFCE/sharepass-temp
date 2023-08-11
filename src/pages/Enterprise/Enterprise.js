@@ -5,14 +5,15 @@ import http1 from "../variables";
 import TinyTitle from "../../components/tinytitle/TinyTitle";
 import "./enterprise.css";
 import UseCases from "./usecases/UseCases";
-// import enterpriseVideo from "../../assets/animations/Enterprise.mp4";
 import Envelope from "./envelope/Envelope";
 import Helmet from "react-helmet";
 import {defaultMetaDescription, defaultOgImg} from "../../assets/js/blogConfig";
 import {Player} from "@lottiefiles/react-lottie-player";
 
+// MP4s
+import enterpriseVideo from "../../assets/videos/new/enterprise-solution.mp4";
 // lottie files
-import enterpriseVideo from "../../assets/lottie/ent-solution.json";
+// import enterpriseVideo from "../../assets/lottie/ent-solution.json";
 
 const Enterprise = () => {
 	const [data, setData] = useState([]);
@@ -84,7 +85,7 @@ const Enterprise = () => {
 				<div className="content_sec">
 					<div className="flap" style={{opacity: 1, transition: "all 1.5s ease-in-out"}}>
 						<div className="video_wrap">
-							{/* <video
+							<video
 								className="img_video"
 								// src={`${http1}${data.sec_image}`}
 								src={enterpriseVideo}
@@ -92,8 +93,8 @@ const Enterprise = () => {
 								loop
 								muted
 								playsInline
-							/> */}
-							<Player src={enterpriseVideo} autoplay loop />
+							/>
+							{/* <Player src={enterpriseVideo} autoplay loop /> */}
 						</div>
 						<div className="text_wrap pl">
 							<h2>{data.sec_title}</h2>

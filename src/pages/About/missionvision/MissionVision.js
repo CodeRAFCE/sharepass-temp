@@ -1,7 +1,7 @@
 import "./missionvision.css";
 import { useState } from "react";
-import http1 from "../../variables";
 import { InView } from 'react-intersection-observer';
+import missionVisionImg from '../../../assets/images/Mission-Vision.png';
 
 
 const MissionVision = ({ title, para, image }) => {
@@ -24,7 +24,7 @@ const MissionVision = ({ title, para, image }) => {
                             <p>{para}</p>
                         </div>
                         <div className="img_wrap">
-                            <img src={`${http1}${image}`} alt='vision' />
+                            <img src={missionVisionImg} alt='vision' />
                         </div>
                     </div>
                 </InView>
