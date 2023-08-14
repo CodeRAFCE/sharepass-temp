@@ -40,6 +40,7 @@ const Features = (props) => {
 							<div className="video_wrap">
 								{/* <Lottie animationData={timeControlled} loop play /> */}
 								{/* <Player src={timeControlled} loop autoplay /> */}
+
 								<video
 									className="img_video desktop test-style"
 									//src={`${http1}${props.image2}`}
