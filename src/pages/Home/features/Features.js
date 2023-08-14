@@ -8,6 +8,7 @@ import {Player} from "@lottiefiles/react-lottie-player";
 // mp4s
 import timeControlled from "../../../assets/videos/new/time-controlled.mp4";
 import timeControlledMobile from "../../../assets/videos/new/time-controlled-mobile.mp4";
+// import timeControlledMobileWM from "../../../assets/webm/1.webm";
 import mobilePrivacy from "../../../assets/videos/new/privacy-message.mp4";
 
 // lottie file
@@ -39,7 +40,7 @@ const Features = (props) => {
 							<div className="video_wrap">
 								{/* <Lottie animationData={timeControlled} loop play /> */}
 								{/* <Player src={timeControlled} loop autoplay /> */}
-								{/* <video
+								<video
 									className="img_video desktop test-style"
 									//src={`${http1}${props.image2}`}
 									src={timeControlled}
@@ -47,10 +48,10 @@ const Features = (props) => {
 									loop
 									muted
 									playsInline
-								/> */}
+								/>
 
 								<video
-									className="img_video"
+									className="img_video mobile"
 									//src={`${http1}${props.image2}`}
 									src={timeControlledMobile}
 									autoPlay
@@ -58,6 +59,10 @@ const Features = (props) => {
 									muted
 									playsInline
 								/>
+								{/* <source src={timeControlledMobileWM} type="video/webm" />
+									<source src={timeControlledMobile} type="video/mp4" />
+									Your browser is not supported
+								</video> */}
 							</div>
 							<div className="text_wrap pl">
 								<h2>{props.title1}</h2>
