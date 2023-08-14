@@ -7,6 +7,7 @@ import {Player} from "@lottiefiles/react-lottie-player";
 
 // mp4s
 import timeControlled from "../../../assets/videos/new/time-controlled.mp4";
+import timeControlledMobile from "../../../assets/videos/new/time-controlled-mobile.mp4";
 import mobilePrivacy from "../../../assets/videos/new/privacy-message.mp4";
 
 // lottie file
@@ -38,10 +39,20 @@ const Features = (props) => {
 							<div className="video_wrap">
 								{/* <Lottie animationData={timeControlled} loop play /> */}
 								{/* <Player src={timeControlled} loop autoplay /> */}
+								{/* <video
+									className="img_video desktop test-style"
+									//src={`${http1}${props.image2}`}
+									src={timeControlled}
+									autoPlay
+									loop
+									muted
+									playsInline
+								/> */}
+
 								<video
 									className="img_video"
 									//src={`${http1}${props.image2}`}
-									src={timeControlled}
+									src={timeControlledMobile}
 									autoPlay
 									loop
 									muted
@@ -64,28 +75,30 @@ const Features = (props) => {
 							}
 						}}
 					>
-						<div
-							className="flap center"
-							style={{opacity: second ? 1 : 0, transition: "all 1.5s ease-in-out"}}
-						>
-							<div className="text_wrap pr">
-								<h2>{props.title2}</h2>
-								<p>{props.para2}</p>
-							</div>
+						<div className="video-container">
+							<div
+								className="flap center"
+								style={{opacity: second ? 1 : 0, transition: "all 1.5s ease-in-out"}}
+							>
+								<div className="text_wrap pr">
+									<h2>{props.title2}</h2>
+									<p>{props.para2}</p>
+								</div>
 
-							<div className="video_wrap">
-								{/*<Player src={mobilePrivacy} loop autoplay />*/}
-								{
-									<video
-										className="img_video"
-										//src={`${http1}${props.image2}`}
-										src={mobilePrivacy}
-										autoPlay
-										loop
-										muted
-										playsInline
-									/>
-								}
+								<div className="video_wrap">
+									{/*<Player src={mobilePrivacy} loop autoplay />*/}
+									{
+										<video
+											className="img_video "
+											//src={`${http1}${props.image2}`}
+											src={mobilePrivacy}
+											autoPlay
+											loop
+											muted
+											playsInline
+										/>
+									}
+								</div>
 							</div>
 						</div>
 					</InView>
