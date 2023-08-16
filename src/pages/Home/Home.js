@@ -17,6 +17,8 @@ import Statistics from "./statistics/Statistics";
 import Helmet from "react-helmet";
 import {defaultMetaDescription, defaultMetaTitle, defaultOgImg} from "../../assets/js/blogConfig";
 import FeatureV2 from "./features/FeaturesV2";
+import EnterpriseVideoSection from "./enterprise/EnterpriseVideoSection";
+import MobilePrivacy from "./mobileprivacy/MobilePrivacy";
 //import Envelope from "./envelope/Envelope";
 
 function Home() {
@@ -124,16 +126,14 @@ function Home() {
 			{false && <Statistics />}
 			<OurCustomers />
 
-			<FeatureV2
-				title1={page.sec_2_title}
-				title2={page.sec_3_title}
-				title3={page.sec_4_title}
-				para1={page.sec_2_desc}
-				para2={page.sec_3_desc}
-				para3={page.sec_4_desc}
-				image1={page.sec_2_image}
-				image2={page.sec_3_image}
-				image3={page.sec_4_image}
+			<MobilePrivacy title1={page.sec_3_title} para1={page.sec_3_desc} image1={page.sec_3_image} />
+
+			<FeatureV2 title1={page.sec_2_title} para1={page.sec_2_desc} image1={page.sec_2_image} />
+
+			<EnterpriseVideoSection
+				title1={page.sec_4_title}
+				para1={page.sec_4_desc}
+				image1={page.sec_4_image}
 			/>
 
 			{/* <Features
@@ -147,6 +147,7 @@ function Home() {
         image2={page.sec_3_image}
         image3={page.sec_4_image}
       /> */}
+
 			<EffortlessSharing
 				title1={page.sec_5_title}
 				title2={page.sec_6_title}
@@ -154,6 +155,7 @@ function Home() {
 				para2={page.sec_6_desc}
 				video={page.sec_6_image}
 			/>
+
 			{/*false && <Envelope
         title1={page.sec_2_title}
         title2={page.sec_3_title}
@@ -164,7 +166,7 @@ function Home() {
         image1={page.sec_2_image}
         image2={page.sec_3_image}
         image3={page.sec_4_image}
-  />*/}
+ 		 />*/}
 
 			<ConnectingWorld
 				image={page.sec_10_image}

@@ -1,16 +1,16 @@
-import styles from "./featuresV2.module.css";
+import styles from "./mobile-privacy.module.css";
 
 // import React, {useState} from "react";
 // import {InView} from "react-intersection-observer";
 
-import timeControlledHor from "../../../assets/videos/new/time-controlled-hor.mp4";
-import timeControlledVer from "../../../assets/videos/new/time-controlled-ver.mp4";
+import mobilePrivacyHor from "../../../assets/videos/new/mobile-privacy-hor.mp4";
+import mobilePrivacyVer from "../../../assets/videos/new/mobile-privacy-ver.mp4";
 
-const FeatureV2 = (props) => {
+const MobilePrivacy = (props) => {
 	// const [first, setFirst] = useState(false);
 	return (
 		<section className={styles.section_container}>
-			<div className={`${styles.content_wrapper} ${styles.center_start}`}>
+			<div className={`${styles.content_wrapper} ${styles.center_end}`}>
 				{/* <InView
 					onChange={(inView, entry) => {
 						if (inView) {
@@ -35,7 +35,7 @@ const FeatureV2 = (props) => {
 				<video
 					className={`${styles.imgVideo} ${styles.desktop_video}`}
 					//src={`${http1}${props.image2}`}
-					src={timeControlledHor}
+					src={mobilePrivacyHor}
 					autoPlay
 					loop
 					muted
@@ -45,7 +45,7 @@ const FeatureV2 = (props) => {
 				<video
 					className={`${styles.imgVideo} ${styles.mobile_video}`}
 					//src={`${http1}${props.image2}`}
-					src={timeControlledVer}
+					src={mobilePrivacyVer}
 					autoPlay
 					loop
 					muted
@@ -57,4 +57,4 @@ const FeatureV2 = (props) => {
 	);
 };
 
-export default FeatureV2;
+export default MobilePrivacy;

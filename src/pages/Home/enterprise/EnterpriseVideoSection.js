@@ -1,13 +1,33 @@
 import styles from "./enterpriseVideoSection.module.css";
 
-import enterpriseHor from "../../assets/videos/new/enterprise-hor.mp4";
-import enterpriseVer from "../../assets/videos/new/enterprise-ver.mp4";
+// import {useState} from "react";
+// import {InView} from "react-intersection-observer";
+
+import enterpriseHor from "../../../assets/videos/new/enterprise-hor.mp4";
+import enterpriseVer from "../../../assets/videos/new/enterprise-ver.mp4";
 
 const EnterpriseVideoSection = (props) => {
 	// const [first, setFirst] = useState(false);
+
 	return (
 		<section className={styles.section_container}>
 			<div className={`${styles.content_wrapper} ${styles.center_end}`}>
+				{/* <InView
+					onChange={(inView, entry) => {
+						if (inView) {
+							setFirst(true);
+						} else {
+							setFirst(false);
+						}
+					}}
+					style={{
+						opacity: first ? 1 : 0,
+						transition: "all 1.5s ease-in-out",
+						width: "100%",
+						height: "100%",
+					}}
+					className={styles.center_end}
+				> */}
 				<div className={`${styles.content_wrap} ${styles.pad_left}`}>
 					<h2>{props.title1}</h2>
 					<p>{props.para1}</p>
@@ -32,6 +52,7 @@ const EnterpriseVideoSection = (props) => {
 					muted
 					playsInline
 				/>
+				{/* </InView> */}
 			</div>
 		</section>
 	);

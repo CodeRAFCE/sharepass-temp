@@ -11,7 +11,6 @@ import {useNavigate} from "react-router-dom";
 
 // MP4s
 import enterpriseVideo from "../../assets/videos/new/enterprise-solution.mp4";
-import EnterpriseVideoSection from "./EnterpriseVideoSection";
 // lottie files
 // import enterpriseVideo from "../../assets/lottie/ent-solution.json";
 
@@ -131,46 +130,41 @@ const Enterprise = () => {
 				<meta property="og:description" content={defaultMetaDescription} />
 				<meta property="og:image" content={defaultOgImg} />
 			</Helmet>
-			{false && (
-				<section className="features_sec" id="features">
-					<div className="content_sec">
-						<div className="flap" style={{opacity: 1, transition: "all 1.5s ease-in-out"}}>
-							<div className="text_wrap pr first-block-enterprise">
-								<div className="text_wraper">
-									<TinyTitle title="Empowering Enterprise Security with" />
-									<h1>SharePass One</h1>
-								</div>
-								<p>
-									Welcome to SharePass ONE, our flagship product developed for Enterprise clients.
-									“SharePass One” is a comprehensive suite of advanced features tailored to meet
-									modern organisations’ stringent security and collaboration demands. This
-									enterprise-grade version of SharePass elevates data protection, data sovereignty,
-									sharing efficiency, and administrative control, ensuring that sensitive
-									information remains safeguarded while enabling seamless collaboration across
-									platforms.
-								</p>
-								<button type="button" className="second" onClick={contactSales}>
-									Contact Sales
-								</button>
+			<section className="features_sec" id="features">
+				<div className="content_sec">
+					<div className="flap" style={{opacity: 1, transition: "all 1.5s ease-in-out"}}>
+						<div className="text_wrap pr first-block-enterprise">
+							<div className="text_wraper">
+								<TinyTitle title="Empowering Enterprise Security with" />
+								<h1>SharePass One</h1>
 							</div>
-							<div className="video_wrap">
-								<video
-									className="img_video"
-									// src={`${http1}${data.sec_image}`}
-									src={enterpriseVideo}
-									autoPlay
-									loop
-									muted
-									playsInline
-									// <Player src={enterpriseVideo} autoplay loop />
-								/>
-							</div>
+							<p>
+								Welcome to SharePass ONE, our flagship product developed for Enterprise clients.
+								“SharePass One” is a comprehensive suite of advanced features tailored to meet
+								modern organization's stringent security and collaboration demands. This
+								enterprise-grade version of SharePass elevates data protection, data sovereignty,
+								sharing efficiency, and administrative control, ensuring that sensitive information
+								remains safeguarded while enabling seamless collaboration across platforms.
+							</p>
+							<button type="button" className="second" onClick={contactSales}>
+								Contact Sales
+							</button>
+						</div>
+						<div className="video_wrap">
+							<video
+								className="img_video"
+								// src={`${http1}${data.sec_image}`}
+								src={enterpriseVideo}
+								autoPlay
+								loop
+								muted
+								playsInline
+								// <Player src={enterpriseVideo} autoplay loop />
+							/>
 						</div>
 					</div>
-				</section>
-			)}
-
-			<EnterpriseVideoSection title1={data.sec_title} para1={data.sec_desc} />
+				</div>
+			</section>
 
 			<section className="enterprise_landing">
 				<div className="content_sec">
