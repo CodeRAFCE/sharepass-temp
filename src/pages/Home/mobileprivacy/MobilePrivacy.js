@@ -3,8 +3,8 @@ import styles from "./mobile-privacy.module.css";
 // import React, {useState} from "react";
 // import {InView} from "react-intersection-observer";
 
-import mobilePrivacyHor from "../../../assets/videos/new/mobile-privacy-hor.mp4";
-import mobilePrivacyVer from "../../../assets/videos/new/mobile-privacy-ver.mp4";
+import mobilePrivacyHor from "../../../assets/videos/compressed/mobile-privacy-hor.mp4";
+import mobilePrivacyVer from "../../../assets/videos/compressed/mobile-privacy-ver.mp4";
 
 const MobilePrivacy = (props) => {
 	// const [first, setFirst] = useState(false);

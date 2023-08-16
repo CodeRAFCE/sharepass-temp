@@ -3,8 +3,8 @@ import styles from "./featuresV2.module.css";
 // import React, {useState} from "react";
 // import {InView} from "react-intersection-observer";
 
-import timeControlledHor from "../../../assets/videos/new/time-controlled-hor.mp4";
-import timeControlledVer from "../../../assets/videos/new/time-controlled-ver.mp4";
+import timeControlledHor from "../../../assets/videos/compressed/time-controlled-hor.mp4";
+import timeControlledVer from "../../../assets/videos/compressed/time-controlled-ver.mp4";
 
 const FeatureV2 = (props) => {
 	// const [first, setFirst] = useState(false);

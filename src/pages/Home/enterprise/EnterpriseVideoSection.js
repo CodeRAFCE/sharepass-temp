@@ -3,8 +3,8 @@ import styles from "./enterpriseVideoSection.module.css";
 // import {useState} from "react";
 // import {InView} from "react-intersection-observer";
 
-import enterpriseHor from "../../../assets/videos/new/enterprise-hor.mp4";
-import enterpriseVer from "../../../assets/videos/new/enterprise-ver.mp4";
+import enterpriseHor from "../../../assets/videos/compressed/enterprise-hor.mp4";
+import enterpriseVer from "../../../assets/videos/compressed/enterprise-ver.mp4";
 
 const EnterpriseVideoSection = (props) => {
 	// const [first, setFirst] = useState(false);
