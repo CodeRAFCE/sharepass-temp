@@ -29,9 +29,9 @@ const ResourcesLanding = () => {
                             height="auto" 
                             src="https://www.youtube.com/embed?v=JgQLbposMW4&list=PLX59VfUF4v2AVg0vMKbZMzHls5c0WvOju&rel=0" 
                             title="How to use SharePass" 
-                            frameborder="0" 
+                            frameBorder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share; fullscreen" 
-                            allowfullscreen={true}>
+                            allowFullScreen={true}>
                         </iframe>
                     </div>
                 </div>

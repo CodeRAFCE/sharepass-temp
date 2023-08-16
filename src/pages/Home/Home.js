@@ -16,7 +16,7 @@ import Map from "./map/Map";
 import Statistics from "./statistics/Statistics";
 import Helmet from "react-helmet";
 import {defaultMetaDescription, defaultMetaTitle, defaultOgImg} from "../../assets/js/blogConfig";
-import FeatureV2 from "./features/FeatureV2";
+import FeatureV2 from "./features/FeaturesV2";
 //import Envelope from "./envelope/Envelope";
 
 function Home() {
@@ -53,7 +53,7 @@ function Home() {
 			sec_12_desc_1:
 				"Our Free plan is a great way to get started with privacy management. While it provides limited features, it still offers important security measures such as encryption and secure storage for your confidential information.",
 			sec_12_desc_2:
-				"This plan is perfect for individuals who want complete control over their personal information. With unlimited usage, access logs, and the ability to receive secrets, you can rest assured that your data is protected.",
+				"This plan is perfect for individuals who want complete control over their personal information. With unlimited usage, and access logs, you can rest assured that your data is protected.",
 			sec_12_desc_3:
 				"This plan provides a user management portal, allowing you to manage access to confidential information for your team or organization. With additional storage, security keys, and custom secrets, you can easily collaborate on projects and manage sensitive data. The Business plan offers all the features your organization needs to protect your most precious data.",
 			sec_12_image_1: "public/files/2023-05-21T19-41-36.390Z-trust (1).svg",

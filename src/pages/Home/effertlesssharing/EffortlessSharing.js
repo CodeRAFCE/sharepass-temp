@@ -26,10 +26,10 @@ const EffortlessSharing = (props) => {
 	return (
 		<section className="effortless">
 			<div className="content_sec">
-				<h2>Effortless File Sharing</h2>
 				<div className="grid_sec">
 					{/* For Screen > 900px */}
 					<div className="text_wraper">
+						<h2>Effortless File Sharing</h2>
 						<div className={`text_block open`}>
 							{false && (
 								<div className="progress">
@@ -51,6 +51,7 @@ const EffortlessSharing = (props) => {
 					</div>
 					{/* For Screen < 900px */}
 					<div className="small_text_wrap">
+						<h2>Effortless File Sharing</h2>
 						<div className="horizontal_wrap">
 							{false && (
 								<div className="h_progress">

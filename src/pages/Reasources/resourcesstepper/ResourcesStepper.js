@@ -35,6 +35,37 @@ const ResourcesStepper = () => {
         return date.toLocaleDateString('en-US', options);
     }
 
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const handleIntersection = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                if (entry.target.id === 'first') {
+                    setActiveStep(1);
+                } else if (entry.target.id === 'second') {
+                    setActiveStep(2);
+                } else if (entry.target.id === 'third') {
+                    setActiveStep(3);
+                } else if (entry.target.id === 'fourth') {
+                    setActiveStep(4);
+                }
+            }
+        });
+    };
+
+
+    const sectionRefs = [
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null)
+    ];
+
     const getblogs = async (page = 1) => {
         setBlogLoading(true);
         await axios.get(`${apiBaseUrl}posts?_embed=true&per_page=4&page=${page}`)
@@ -47,6 +78,14 @@ const ResourcesStepper = () => {
                 console.log(error);
             });
         setBlogLoading(false);
+
+        
+        const sectionRef = sectionRefs[0];
+        if (sectionRef.current) {
+            const observer = new IntersectionObserver(handleIntersection, options);
+            // Re-observe the section
+            observer.observe(sectionRef.current);
+        }
     }
 
     const getEvents = async (page = 1) => {
@@ -95,42 +134,17 @@ const ResourcesStepper = () => {
             scrollToSection('second');
         } else if (num === 3) {
             scrollToSection('third');
+        } else if (num === 4) {
+            scrollToSection('fourth');
         } else {
             scrollToSection('first');
         }
     }
 
-
-    const sectionRefs = [
-        useRef(null),
-        useRef(null),
-        useRef(null)
-    ];
-
     useEffect(() => {
         getblogs();
         getEvents();
         getMediaPosts();
-
-        const options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
-
-        const handleIntersection = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    if (entry.target.id === 'first') {
-                        setActiveStep(1);
-                    } else if (entry.target.id === 'second') {
-                        setActiveStep(2);
-                    } else if (entry.target.id === 'third') {
-                        setActiveStep(3);
-                    }
-                }
-            });
-        };
 
         const observer = new IntersectionObserver(handleIntersection, options);
 
@@ -166,20 +180,8 @@ const ResourcesStepper = () => {
                             <SectionTitle title="Blog Articles" img={articlibg} />
                             {blogData.length > 0 && <div className="cards_grid">
                                 {blogData.map((data) => {
-                                    let category;
-
-                                    if(
-                                        data._embedded && 
-                                        data._embedded["wp:term"] && 
-                                        data._embedded["wp:term"].length > 0 && 
-                                        data._embedded["wp:term"][0].length > 0 &&
-                                        data._embedded["wp:term"][0][0].name
-                                    ){
-                                        category = data._embedded["wp:term"][0][0].name;
-                                    }
-
                                     return (<Fragment key={data.slug}>
-                                        <BlockCard title={data.title? data.title.rendered : ""} img={data.fimg_url} type={category} id={data.slug} date={formatDate(data.date)} />
+                                        <BlockCard title={data.title? data.title.rendered : ""} img={data.fimg_url} type={'Blog'} id={data.slug} date={formatDate(data.date)} />
                                     </Fragment>)
                                 })}
                             </div>}
@@ -252,6 +254,11 @@ const ResourcesStepper = () => {
                             </div>}
                         </div>
                     </div>
+                </div>
+
+                <div className="sec sec_media">
+                    <SectionTitle title="Linkedin News" img={eventbg} />
+                    <div className='sk-ww-linkedin-newsletter' data-embed-id='180765'></div>
                 </div>
             </div>
         </section>

@@ -144,10 +144,14 @@
   .landing .content_sec .text_side{
     padding-top:80px;
   }
+
+  .landing .content_sec .text_side h1 {
+    text-align: center;
+  }
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 560px) {
   .landing .content_sec .text_side .btn_wrap {
     flex-direction: column;
     align-items: center;
@@ -161,15 +165,6 @@
   .landing .content_sec .text_side .btn_wrap a button{
     width: 100%;
     
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .landing video.mobile_video{
-    display: block;
-  }
-  .landing video.landingv{
-    display: none;
   }
 }
 

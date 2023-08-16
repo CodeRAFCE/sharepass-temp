@@ -5,8 +5,10 @@ import mobilevideo from "../../../assets/animations/hero-banner/Mobile.mp4";
 import { useEffect, useState } from 'react';
 import TinyTitle from "../../../components/tinytitle/TinyTitle";
 import WistiaPlayer from "./video/WistiaVideo";
+import { useNavigate } from "react-router-dom";
 
 const Landing = ({ title, para }) => {
+    const navigate = useNavigate();
     const [popupStatus, setPopupStatus] = useState(false);
     
     const closePopup = () => {
@@ -17,6 +19,10 @@ const Landing = ({ title, para }) => {
     const openPopup = () => {
         setPopupStatus(true);
     }
+
+    const contactSales = () =>{
+        navigate(`/contact`,{state:{motive: 'sales'}});
+    };
 
     /*const goToFeature = () => {
         document.getElementById('features').scrollIntoView({
@@ -93,7 +99,10 @@ const Landing = ({ title, para }) => {
                                             </g> 
                                         </g>
                                     </svg>
-                                </button>                     
+                                </button>            
+                                <button type='button' className="second" onClick={contactSales} >
+                                    Contact Sales
+                                </button>          
                         </div>
                     </div>
                 </div>

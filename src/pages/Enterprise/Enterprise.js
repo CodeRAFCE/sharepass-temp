@@ -5,18 +5,91 @@ import http1 from "../variables";
 import TinyTitle from "../../components/tinytitle/TinyTitle";
 import "./enterprise.css";
 import UseCases from "./usecases/UseCases";
-import Envelope from "./envelope/Envelope";
 import Helmet from "react-helmet";
 import {defaultMetaDescription, defaultOgImg} from "../../assets/js/blogConfig";
-import {Player} from "@lottiefiles/react-lottie-player";
+import {useNavigate} from "react-router-dom";
 
 // MP4s
 import enterpriseVideo from "../../assets/videos/new/enterprise-solution.mp4";
+import EnterpriseVideoSection from "./EnterpriseVideoSection";
 // lottie files
 // import enterpriseVideo from "../../assets/lottie/ent-solution.json";
 
 const Enterprise = () => {
+	const navigate = useNavigate();
 	const [data, setData] = useState([]);
+
+	const contactSales = () => {
+		navigate(`/contact`, {state: {motive: "sales"}});
+	};
+
+	const featuredItems = [
+		{
+			title: "File Sharing with Extended Storage",
+			description:
+				"SharePass ONE offers robust file-sharing capabilities, enabling a secure and efficient exchange of files within the organisation. Extended storage ensures ample room for your data without compromising security. Each link acts as an independent vault controlled via a central portal so you can see all your shares in a single place.",
+			img: require("../../assets/images/enterprise/512/file-sharing.png"),
+		},
+		{
+			title: "Secure Secrets with Security Keys",
+			description:
+				"Elevate data security with security keys, providing an additional access control layer. Security keys validate user identity, ensuring only authorised individuals (who possess the key) can access confidential information. Leverage NFC technology (near-field communication) to unlock secrets from mobile devices without USB connections. Enhance user convenience without sacrificing security.",
+			img: require("../../assets/images/enterprise/512/security-keys.png"),
+		},
+		{
+			title: "Security Keys Enrolment (Local and Remote)",
+			description:
+				"Enable seamless security key enrolment, even for users who don’t have their physical keys on hand. This feature ensures business continuity while maintaining strong authentication.",
+			img: require("../../assets/images/enterprise/512/remote-local-security-key-enrollment.png"),
+		},
+		{
+			title: "White Labelling",
+			description:
+				"Customise the SharePass ONE experience with your organisation’s branding. Enjoy a branded domain, logo, and background colours, enhancing the user experience and reinforcing corporate identity.",
+			img: require("../../assets/images/enterprise/512/white-labeling.png"),
+		},
+		{
+			title: "Enterprise Single Sign-On",
+			description:
+				"Seamlessly integrate SharePass ONE with Office 365, Google Workspace, Apple, and more using SAML-based Enterprise SSO. Streamline user access without compromising security.",
+			img: require("../../assets/images/enterprise/512/enterprise-sso.png"),
+		},
+		{
+			title: "Admin Portal",
+			description:
+				"Empower administrators with a robust portal to efficiently manage users and resources. Create global templates, labels, and security keys to enforce consistent sharing practices across the organisation. Manage policies and enforce controls based on your organisation’s security policy.",
+			img: require("../../assets/images/enterprise/512/portal.png"),
+		},
+		{
+			title: "Custom Integrations",
+			description:
+				"SharePass developers can craft custom integrations to align secret sharing with your organisation’s unique needs, ensuring a seamless workflow and optimised processes. Our team can also develop a specific required functionality making your SharePass instance unique to you.",
+			img: require("../../assets/images/enterprise/512/integrations.png"),
+		},
+		{
+			title: "Dedicated AWS Instance",
+			description:
+				"Rest assured that a dedicated AWS instance meets the highest security, compliance, and data protection standards. Your organisation’s sensitive information remains fortified within a controlled environment based on your region of choice.",
+			img: require("../../assets/images/enterprise/512/dedicated-instance.png"),
+		},
+		{
+			title: "Envelopes for Receiving Data",
+			description:
+				"Unlike the personal version of SharePass, SharePass ONE enables your organisation to receive data from third-party entities, enhancing collaboration possibilities.",
+			img: require("../../assets/images/enterprise/512/envelopes-receive-data.png"),
+		},
+		/*{
+			title: "",
+			description: "",
+			img: null
+		},*/
+		{
+			title: "Inspector AI Module",
+			description:
+				"Leverage the power of NVIDIA’s AI to analyse documents and images, detecting potential confidential data that requires encryption, further enhancing data protection.",
+			img: require("../../assets/images/enterprise/512/inspector-ai.png"),
+		},
+	];
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -58,52 +131,99 @@ const Enterprise = () => {
 				<meta property="og:description" content={defaultMetaDescription} />
 				<meta property="og:image" content={defaultOgImg} />
 			</Helmet>
+			{false && (
+				<section className="features_sec" id="features">
+					<div className="content_sec">
+						<div className="flap" style={{opacity: 1, transition: "all 1.5s ease-in-out"}}>
+							<div className="text_wrap pr first-block-enterprise">
+								<div className="text_wraper">
+									<TinyTitle title="Empowering Enterprise Security with" />
+									<h1>SharePass One</h1>
+								</div>
+								<p>
+									Welcome to SharePass ONE, our flagship product developed for Enterprise clients.
+									“SharePass One” is a comprehensive suite of advanced features tailored to meet
+									modern organisations’ stringent security and collaboration demands. This
+									enterprise-grade version of SharePass elevates data protection, data sovereignty,
+									sharing efficiency, and administrative control, ensuring that sensitive
+									information remains safeguarded while enabling seamless collaboration across
+									platforms.
+								</p>
+								<button type="button" className="second" onClick={contactSales}>
+									Contact Sales
+								</button>
+							</div>
+							<div className="video_wrap">
+								<video
+									className="img_video"
+									// src={`${http1}${data.sec_image}`}
+									src={enterpriseVideo}
+									autoPlay
+									loop
+									muted
+									playsInline
+									// <Player src={enterpriseVideo} autoplay loop />
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
+			)}
+
+			<EnterpriseVideoSection title1={data.sec_title} para1={data.sec_desc} />
+
 			<section className="enterprise_landing">
 				<div className="content_sec">
 					<div className="text_wraper">
-						<TinyTitle title="SHAREPASS FOR ENTERPRISES" />
-						<h1>{data.title}</h1>
+						<h2>Exclusive Features</h2>
 					</div>
 					<div className="text-intro">
 						<p className="para">
-							Introducing our stellar enterprise product, meticulously crafted to meet the unique
-							needs of businesses like yours. Designed with a focus on scalability, security, and
-							seamless integration, our solution empowers your enterprise to thrive in today's
-							competitive landscape.
-						</p>
-						<br />
-						<p className="para">
 							Our enterprise product offers a comprehensive suite of advanced features, allowing
-							your team to streamline workflows, boost productivity, and achieve remarkable
-							efficiency gains. With enterprise-grade security measures, data protection is
+							your team to streamline workflows, boost productivity,and achieve remarkable
+							efficiency gains. With enterprise-grade security measures, data protective is
 							paramount, ensuring your sensitive information remains safe and confidential.
 						</p>
 					</div>
 				</div>
 			</section>
+
 			<section className="features_sec" id="features">
 				<div className="content_sec">
-					<div className="flap" style={{opacity: 1, transition: "all 1.5s ease-in-out"}}>
-						<div className="video_wrap">
-							<video
-								className="img_video"
-								// src={`${http1}${data.sec_image}`}
-								src={enterpriseVideo}
-								autoPlay
-								loop
-								muted
-								playsInline
-							/>
-							{/* <Player src={enterpriseVideo} autoplay loop /> */}
-						</div>
-						<div className="text_wrap pl">
-							<h2>{data.sec_title}</h2>
-							<p>{data.sec_desc}</p>
-						</div>
+					<div className="post_grid">
+						{featuredItems.map((data, index) => {
+							return (
+								<Fragment /*key={data.slug}*/ key={index}>
+									<div className="blog">
+										<div className="img_wrap">
+											<img src={data.img ? data.img : ""} alt="" />
+										</div>
+										<h3>{data.title ? data.title : ""}</h3>
+										<p>{data.description ? data.description : ""}</p>
+									</div>
+								</Fragment>
+							);
+						})}
 					</div>
 				</div>
 			</section>
-			<Envelope />
+			<section className="enterprise_landing">
+				<div className="content_sec">
+					<div className="text_wraper">
+						<h2>Summary</h2>
+					</div>
+					<div className="text-intro">
+						<p className="para">
+							SharePass ONE for Enterprise extends beyond data protection, offering an unparalleled
+							suite of features to enhance collaboration, streamline workflows, and empower
+							administrators. With advanced security measures, seamless integration options,
+							customisation capabilities, and a commitment to innovation, SharePass ONE ensures that
+							your organisation’s sensitive information remains under your control, even in today’s
+							dynamic and collaborative digital landscape.
+						</p>
+					</div>
+				</div>
+			</section>
 			<UseCases
 				image1={data.sec_7_image}
 				image2={data.sec_8_image}

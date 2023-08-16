@@ -12,7 +12,8 @@
 }
 
 body {
-  background-color: #f1f3f9;
+  /*background-color: #f1f3f9;*/
+  background-color: #f5f6fc;
   font-family: "Plus Jakarta Sans", sans-serif;
   -webkit-user-drag: none;
 

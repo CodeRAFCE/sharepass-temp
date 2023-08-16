@@ -82,7 +82,7 @@ const handleSubmit = async (e) => {
                         <NavLink to="/technology">Technology</NavLink>
                         <NavLink to="/partners">Partners</NavLink>
                         <NavLink to="/ourteam">Our Team</NavLink>
-                        <NavLink to="">Contact</NavLink>
+                        <NavLink to="/contact">Contact</NavLink>
                     </div>
                     <div className="links_row">
                         <p>Resources</p>
