@@ -3,8 +3,8 @@ import styles from "./envelopeVideoSection.module.css";
 // import {useState} from "react";
 // import {InView} from "react-intersection-observer";
 
-import envelopeHor from "../../../assets/videos/new/envolope-hor.mp4";
-import envelopeVer from "../../../assets/videos/new/envolope-ver.mp4";
+import envelopeHor from "../../../assets/videos/new/envolop-hor.mp4";
+import envelopeVer from "../../../assets/videos/new/envolop-ver.mp4";
 
 const EnvelopeVideoSection = (props) => {
 	// const [first, setFirst] = useState(false);
