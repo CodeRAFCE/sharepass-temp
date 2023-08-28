@@ -129,6 +129,13 @@ function Home() {
 
 			{/* -------------------------------------------- */}
 			{/* -------------------------------------------- */}
+			<EnvelopeVideoSection
+				title1={"Receive data securely"}
+				para1={
+					"Use our envelope feature to request confidential data from third parties securely and smoothly"
+				}
+				image1={page.sec_4_image}
+			/>
 			<MobilePrivacy title1={page.sec_3_title} para1={page.sec_3_desc} image1={page.sec_3_image} />
 			<FeatureV2 title1={page.sec_2_title} para1={page.sec_2_desc} image1={page.sec_2_image} />
 			{/* <EnterpriseVideoSection
@@ -137,13 +144,6 @@ function Home() {
 				image1={page.sec_4_image}
 			/> */}
 
-			<EnvelopeVideoSection
-				title1={"Receive data securely"}
-				para1={
-					"Use our envelope feature to request confidential data from third parties securely and smoothly"
-				}
-				image1={page.sec_4_image}
-			/>
 			{/* -------------------------------------------- */}
 			{/* -------------------------------------------- */}
 
