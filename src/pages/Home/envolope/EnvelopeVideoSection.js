@@ -6,6 +6,10 @@ import styles from "./envelopeVideoSection.module.css";
 import envelopeHor from "../../../assets/videos/new/envolop-hor.mp4";
 import envelopeVer from "../../../assets/videos/new/envolop-ver.mp4";
 
+// webm
+import envelopeWbmHor from "../../../assets/webm/envolop-wbm-hor.webm";
+import envelopeWbmVer from "../../../assets/webm/envolop-wbm-ver.webm";
+
 const EnvelopeVideoSection = (props) => {
 	// const [first, setFirst] = useState(false);
 
@@ -36,22 +40,26 @@ const EnvelopeVideoSection = (props) => {
 				<video
 					className={`${styles.imgVideo} ${styles.desktop_video}`}
 					//src={`${http1}${props.image2}`}
-					src={envelopeHor}
 					autoPlay
 					loop
 					muted
 					playsInline
-				/>
+				>
+					<source src={envelopeWbmHor} type="video/webm"></source>
+					<source src={envelopeHor} type="video/mp4"></source>
+				</video>
 
 				<video
 					className={`${styles.imgVideo} ${styles.mobile_video}`}
 					//src={`${http1}${props.image2}`}
-					src={envelopeVer}
 					autoPlay
 					loop
 					muted
 					playsInline
-				/>
+				>
+					<source src={envelopeWbmVer} type="video/webm"></source>
+					<source src={envelopeVer} type="video/mp4"></source>
+				</video>
 				{/* </InView> */}
 			</div>
 		</section>
