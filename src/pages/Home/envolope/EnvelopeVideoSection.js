@@ -45,8 +45,7 @@ const EnvelopeVideoSection = (props) => {
 					muted
 					playsInline
 				>
-					<source src={envelopeWbmHor} type="video/webm"></source>
-					<source src={envelopeHor} type="video/mp4"></source>
+					<source src={envelopeHor} type="video/mp4" />
 				</video>
 
 				<video
@@ -57,8 +56,7 @@ const EnvelopeVideoSection = (props) => {
 					muted
 					playsInline
 				>
-					<source src={envelopeWbmVer} type="video/webm"></source>
-					<source src={envelopeVer} type="video/mp4"></source>
+					<source src={envelopeVer} type="video/mp4" />
 				</video>
 				{/* </InView> */}
 			</div>
