@@ -3,8 +3,8 @@ import styles from "./mobile-privacy.module.css";
 // import React, {useState} from "react";
 // import {InView} from "react-intersection-observer";
 
-import mobilePrivacyHor from "../../../assets/videos/compressed/mobile-privacy-hor.mp4";
-import mobilePrivacyVer from "../../../assets/videos/compressed/mobile-privacy-ver.mp4";
+import mobilePrivacyHor from "../../../assets/videos/new/mobile-privacy-hor.mp4";
+import mobilePrivacyVer from "../../../assets/videos/new/mobile-privacy-ver.mp4";
 
 const MobilePrivacy = (props) => {
 	// const [first, setFirst] = useState(false);
@@ -28,8 +28,8 @@ const MobilePrivacy = (props) => {
 					className={styles.center_end}
 				> */}
 				<div className={`${styles.content_wrap} ${styles.pad_left}`}>
-					<h2>{props.title1}</h2>
-					<p>{props.para1}</p>
+					<h2 style={{color: "#0A172C"}}>{props.title1}</h2>
+					<p style={{color: "#0A172C"}}>{props.para1}</p>
 				</div>
 
 				<video
