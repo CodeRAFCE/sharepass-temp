@@ -1,10 +1,12 @@
 import "./map.css";
 import map from "../../../assets/images/map.svg";
-import us from "../../../assets/images/us.webp";
+/*import us from "../../../assets/images/us.webp";
 import sg from "../../../assets/images/sg.webp";
 import au from "../../../assets/images/au.webp";
 import fr from "../../../assets/images/fr.webp";
-import uae from "../../../assets/images/uae.webp";
+import uae from "../../../assets/images/uae.webp";*/
+import mobileLocations from "../../../assets/images/locations.svg";
+
 const Map = () => {
     return (
         <div className="map">
@@ -19,13 +21,16 @@ const Map = () => {
                         <div className="location d"><span>FR</span></div>
                         <div className="location e"><span>UAE</span></div>
                     </div>
-                    <div className="map_text_wrap">
+                    <div className="map_mobile">
+                    <img src={mobileLocations} alt='Locations' />
+                    </div>
+                    {/* <div className="map_text_wrap">
                         <div className="location-flag"><img src={au} alt='Australia' /><div className="country-name">Australia</div></div>
                         <div className="location-flag"><img src={uae} alt='United Arab Emirates' /><div className="country-name">United Arab Emirates</div></div>
                         <div className="location-flag"><img src={sg} alt='Singapore' /><div className="country-name">Singapore</div></div>
                         <div className="location-flag"><img src={fr} alt='France' /><div className="country-name">France</div></div>
                         <div className="location-flag"><img src={us} alt='United States' /><div className="country-name">United States</div></div>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {Player} from "@lottiefiles/react-lottie-player";
 
 // mp4s
-import video from "../../../assets/videos/new/effortless-file-sharing.mp4";
+import video from "../../../assets/animations/Effortless-file-sharing.mp4";
 
 // lottie files
 // import video from "../../../assets/lottie/effortless-file-sharing.json";

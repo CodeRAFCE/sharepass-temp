@@ -8,12 +8,16 @@ const DistributorsInfo = (props) => {
             <h2>{props.title}</h2>
             <p>{props.para}</p>
             
-            <div className="img_alides">
-                <a href="https://natan.com.au" target="_blank">
-                    <img   src={`${http1}${props.image}`} />
-                </a>
-            </div>
-
+            <div class="partners-distributor-container">
+                    <div class="partners-distributor-item">
+                        <div className="partners-distributor-item-content">
+                            <img className="partners-distributor-centered-image" src={`${http1}${props.image}`} />
+                            <a className="partners-distributor-button" href="https://natan.com.au" target="_blank">
+                                Know more
+                            </a>
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
     )

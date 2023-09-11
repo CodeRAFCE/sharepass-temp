@@ -6,7 +6,7 @@ const RegisterInterest = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        navigate('/enterprise', { replace: true });
+        navigate('/contactsales', { replace: true });
     }, []);
 }
 

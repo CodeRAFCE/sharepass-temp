@@ -129,7 +129,7 @@ align-items: center;
 
 .blog_detail .post_grid .blog{
     padding:40px 40px 80px;
-    background-color:#fff;
+    background-color:#f5f6fc;
     transition:all 0.3s ease-in-out;
     position:relative;
     overflow: hidden;

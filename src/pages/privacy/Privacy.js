@@ -3,6 +3,7 @@ import { Fragment, useEffect } from "react";
 import TermsLanding from "../../components/termslanding/TermsLanding";
 import Helmet from 'react-helmet';
 import {defaultMetaDescription, defaultOgImg} from "../../assets/js/blogConfig";
+import { links } from "../../constants/links";
 
 const Privacy = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const Privacy = () => {
       <TermsLanding title="Privacy Policy" />
       <section className="privacy">
         <div className="content_sec">
-          <h2>PRIVICY POLICY</h2>
+          <h2>PRIVACY POLICY</h2>
           <p>
             SharePass Pty Ltd (ACN 647 015 601) ( <strong>SharePass</strong>)
             (“we”, “our”, “us”) offers you the ability to send and receive
@@ -33,7 +34,7 @@ const Privacy = () => {
             The Service is made available to you in use of our licensed and/or
             proprietary software applications ( <strong>Applications</strong>)
             through our website{" "}
-            <a href="">
+            <a href="/">
               <strong>www.sharepass.com</strong>
             </a>{" "}
             ( <strong>Website</strong>) and a variety of Internet-enabled
@@ -44,42 +45,42 @@ const Privacy = () => {
             By using the Service, the Applications or Website, you acknowledge
             that you have read, understood, and agree to be bound by, and abide
             by, these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             . We may change these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             at our discretion and without notice. We may modify, suspend, or
             cancel any content of the Website, the Service, the Applications at
             any time. By continuing to use any of the Website, the Service, and
             the Applications, you accept the{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             as they apply from time to time.{" "}
           </p>
           <p>
             These{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             apply in conjunction with any other terms and conditions that apply
             including our{" "}
-            <a href="">
+            <a href={links[1].path}>
               <strong>Subscription Terms</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[2].path}>
               <strong>Permitted Use Policy</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[3].path}>
               <strong>Privacy Policy</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[4].path}>
               <strong>Cookies Policy</strong>
             </a>
             .{" "}
@@ -100,7 +101,7 @@ const Privacy = () => {
           <p>
             You may only use the Service for lawful purposes in accordance with
             the{" "}
-            <a href="">
+            <a href={links[2].path}>
               <strong>Permitted Use Policy</strong>
             </a>{" "}
             and must ensure that your use does not breach any laws that apply to
@@ -113,7 +114,7 @@ const Privacy = () => {
             We may terminate or restrict access to the Website, Applications or
             Service, or any part thereof, at any time without notice. If we do
             so, these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             will continue to apply, and any use must discontinue or be limited
@@ -126,7 +127,7 @@ const Privacy = () => {
             The Service is available for individuals of any age. However, if you
             are under the age of majority in your jurisdiction (usually 18 years
             of age), you should review these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             with your parent or guardian to make sure that you and your parent
@@ -165,7 +166,7 @@ const Privacy = () => {
           <p>
             Subject to your compliance with all the terms and conditions in
             these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             , SharePass grants to you a personal, non-exclusive, limited,
@@ -183,7 +184,7 @@ const Privacy = () => {
             <li>
               use any other features made available through the Service in
               accordance with the functionality of those features and these{" "}
-              <a href="">
+              <a href={links[0].path}>
                 <strong>Terms of Service</strong>
               </a>
               .{" "}
@@ -199,19 +200,19 @@ const Privacy = () => {
           <p>
             Our license to you, and your use of the Service, are expressly
             conditioned on your adherence to the&nbsp;{" "}
-            <a href="">
+            <a href={links[2].path}>
               <strong>Permitted Use Policy</strong>
             </a>
             , and to your acceptance of the&nbsp;{" "}
-            <a href="">
+            <a href={links[1].path}>
               <strong>Subscription Terms</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[3].path}>
               <strong>Privacy Policy</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[4].path}>
               <strong>Cookies Policy</strong>
             </a>
             .{" "}
@@ -298,7 +299,7 @@ const Privacy = () => {
             subscription payments if you cancel the Services after the renewal
             unless applicable law provides otherwise. No refunds will be
             considered for accounts terminated for violation of these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             . Once the refund is issued to you, you will lose access to the
@@ -317,7 +318,7 @@ const Privacy = () => {
           </p>
           <p>
             Except as expressly permitted under these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             , no right, title, or interest in or to any Content is transferred
@@ -328,7 +329,7 @@ const Privacy = () => {
           </p>
           <p>
             Nothing on the Service or in these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             shall be construed as granting, by implication, estoppel, or
@@ -433,7 +434,7 @@ const Privacy = () => {
             liability in connection with Messages, including any responsibility
             or liability for investigating or verifying the accuracy of any
             Messages. In fact, as noted in our&nbsp;{" "}
-            <a href="">
+            <a href={links[3].path}>
               <strong>Privacy Policy</strong>
             </a>
             , we do not (and cannot) read encrypted Messages.{" "}
@@ -459,14 +460,14 @@ const Privacy = () => {
           <p>
             Our total aggregate financial liability to you is limited to $12 or
             your monthly subscription fee (if any) under these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             , whichever is lesser.{" "}
           </p>
           <p>
             Nothing in these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             shall affect any non-waivable statutory rights that apply to you.{" "}
@@ -493,25 +494,25 @@ const Privacy = () => {
           <p>
             We reserve the right, in our sole discretion, to restrict, suspend,
             or terminate these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             , your access to all or any part of the Service, at any time and for
             any reason without prior notice or liability. We reserve the right
             to change, suspend, or discontinue all or any part of the Service at
             any time without prior notice or liability. You may terminate the{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             by contacting us at <strong>&nbsp;</strong>
-            <a href="">legal@sharepass.com</a>. Upon any termination of the{" "}
-            <a href="">
+            <a href="mailto:legal@sharepass.com">legal@sharepass.com</a>. Upon any termination of the{" "}
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             , the licenses granted above shall terminate, and you shall have no
             right to continue to use the Service.&nbsp;The following provisions
             shall survive the termination of these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             :
@@ -568,7 +569,7 @@ const Privacy = () => {
           <p>
             Any dispute, controversy or claim arising out of, relating to or in
             connection with these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             , the Content, or the Service (each, a <strong>Dispute</strong>),
@@ -638,35 +639,35 @@ const Privacy = () => {
             confidential and proprietary information by you, we will suffer
             irreparable harm and will therefore be entitled to injunctive relief
             to enforce these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             ,{" "}
-            <a href="">
+            <a href={links[2].path}>
               <strong>Permitted Use Policy</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[3].path}>
               <strong>Privacy Policy</strong>
             </a>
             and{" "}
-            <a href="">
+            <a href={links[4].path}>
               <strong>Cookies Policy</strong>
             </a>
             . We may, without waiving any other remedies under the{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             ,{" "}
-            <a href="">
+            <a href={links[2].path}>
               <strong>Permitted Use Policy</strong>
             </a>
             ,{" "}
-            <a href="">
+            <a href={links[3].path}>
               <strong>Privacy Policy</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[4].path}>
               <strong>Cookies Policy</strong>
             </a>{" "}
             seek from any court having jurisdiction any interim, equitable,
@@ -702,19 +703,19 @@ const Privacy = () => {
           </p>
           <p>
             Except as expressly agreed by us and you in writing, these{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>
             ,{" "}
-            <a href="">
+            <a href={links[2].path}>
               <strong>Permitted Use Policy</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[3].path}>
               <strong>Privacy Policy</strong>
             </a>{" "}
             and{" "}
-            <a href="">
+            <a href={links[4].path}>
               <strong>Cookies Policy</strong>
             </a>{" "}
             constitute the entire agreement between you and us with respect to
@@ -735,7 +736,7 @@ const Privacy = () => {
           </p>
           <p>
             These{" "}
-            <a href="">
+            <a href={links[0].path}>
               <strong>Terms of Service</strong>
             </a>{" "}
             are governed by the laws in force in Victoria, Australia without

@@ -1,0 +1,237 @@
+#popupConsent.popup {
+    word-wrap: break-word;
+    background: #0b182a;
+    bottom: 0;
+    box-shadow: 0 3px 6px hsla(0,0%,100%,.16), 0 3px 6px hsla(0,0%,100%,.23);
+    color: #fff;
+    font-size: 1.05em;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    text-align: justify;
+    width: 100%;
+    z-index: 7000;
+}
+
+.popup section {
+    margin: 0;
+    padding: 10px;
+}
+  
+.popup #contentPopupConsent {
+    width: 70%;
+    float: left;
+}
+
+.popup #configureSection p,
+.popup #contentPopupConsent p {
+    color: #d1d1d1;
+}
+
+.popup #contentPopupConsent a {
+    color: #02f3a2;
+}
+
+.popup #contentPopupConsent:hover,
+.popup #configureSection:hover {
+    box-shadow: 0 0 0 transparent;
+}
+.popup .content-popup-theme {
+    text-align: left;
+}
+.popup .content-popup-theme:hover {
+    box-shadow: 0 0 0 transparent;
+}
+.popup .content-popup-theme p {
+    padding-right: 5px;
+    padding-left: 5px;
+    display: block;
+    text-align: center;
+}
+.popup .buttonOk {
+    color: black;
+    background: transparent;
+    padding: 9px 0.57em;
+    -webkit-appearance: none;
+    position: relative;
+    display: block;
+    margin: 0;
+    vertical-align: middle;
+    overflow: visible;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5px;
+    border: 0;
+    border-radius: 7px;
+    user-select: none;
+    transition: all 0.2s ease;
+    outline: 0;
+    cursor: pointer;
+    margin-right: 2%;
+    margin-left: auto;
+}
+.popup .buttonOk:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+.popup p {
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 0.8rem;
+}
+.popup .choice-container-buttons {
+display: flex;
+justify-content: space-around;
+/*margin-right: 20%;
+margin-left: 20%;*/
+margin-top: 20px;
+margin-bottom: 20px;
+width: 20%;
+float: left;
+}
+
+.popup .choice-container-buttons .c-button {
+padding: 9px 0.57em;
+-webkit-appearance: none;
+position: relative;
+/*display: inline-block;*/
+display: block;
+margin: 0;
+/*vertical-align: middle;*/
+overflow: visible;
+font-size: 14px;
+text-align: center;
+font-family: "Roboto", sans-serif;
+letter-spacing: 0.5px;
+background: transparent;
+border: 0;
+border-radius: 1px;
+user-select: none;
+transition: all 0.2s ease;
+background: transparent;
+outline: 0;
+}
+.popup .choice-container-buttons .c-button:hover,
+.popup .choice-container-buttons .c-button:focus {
+text-decoration: none;
+}
+.popup .choice-container-buttons .c-button:not(:disabled) {
+cursor: pointer;
+}
+.popup .choice-container-buttons #accept {
+color: #88e8b3;
+}
+.popup .choice-container-buttons #accept:hover {
+background: #2fd04a17;
+}
+.popup .choice-container-buttons #configure {
+color: #4285f4;
+}
+.popup .choice-container-buttons #configure:hover {
+background: #f0f8ff;
+}
+.popup .choice-container-buttons #enregistre {
+color: #4285f4;
+}
+.popup .choice-container-buttons #enregistre:hover {
+background: #f0f8ff;
+}
+.popup #configureSection {
+width: 70%;
+float: left;
+}
+.popup #configureSection table th {
+color: black;
+text-align: left;
+}
+.popup #configureSection table .text-switch {
+padding: 0 0 0 1rem;
+font-size: 14px;
+color: #d1d1d1;
+font-weight: 100;
+}
+.popup #configureSection table tr {
+display: block;
+padding: 4px;
+}
+
+#contentPopupConsent p {
+margin-bottom: 0 !important;
+}
+
+#configureSection p,
+#contentPopupConsent p {
+margin-bottom: 0 !important;
+}
+  
+@media (max-width: 768px) {
+    .popup .choice-container-buttons {
+        display: flex;
+        justify-content: space-around;
+        /*margin-right: 20%;
+        margin-left: 20%;*/
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        float: left;
+    }
+
+    .popup #configureSection,
+    .popup #contentPopupConsent {
+        width: 100%;
+    }
+
+    .popup p {
+        font-size: 14px;
+    }
+}
+
+
+.cookies-banner-checkbox .switch {
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    width: 40px;
+  }
+
+  .cookies-banner-checkbox .switch input {
+    display:none;
+  }
+
+  .cookies-banner-checkbox .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+
+  .cookies-banner-checkbox .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 14px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 14px;
+  }
+
+  .cookies-banner-checkbox input:checked + .slider {
+    background-color: #02f3a2;
+  }
+
+  .cookies-banner-checkbox input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+
+  .cookies-banner-checkbox .slider.round {
+    border-radius: 22px;
+  }
+
+  .cookies-banner-checkbox .slider.round:before {
+    border-radius: 50%;
+  }

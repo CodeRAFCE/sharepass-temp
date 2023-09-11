@@ -667,7 +667,7 @@ const LeaderDetails = ({ closeHandler, info }) => {
         ],
 
         //For Navoda Bandara
-        [
+        /*[
             {
                 id: 0,
                 icon: cake,
@@ -787,7 +787,7 @@ const LeaderDetails = ({ closeHandler, info }) => {
                 title: 'Explore more',
                 desc: 'Learning new skills is a never ending journey. Learning new soft/Technical skills every day to sharpen my knowledge while providing a positive contribution to the company'
             },
-        ],
+        ],*/
       
     ]
 

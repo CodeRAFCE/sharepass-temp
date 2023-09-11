@@ -62,60 +62,7 @@ const About = () =>{
         "__v": 0
     
 };
-  //const [data, setData] = useState([]);
-  /*const aboutDataApi = async () => {
 
-    let response = {
-          "status": true,
-          "data": {
-              "_id": "6450018c4b181077f18c2b74",
-              "title": "Empowering Data Privacy",
-              "description": "At SharePass, we believe our clients deserve control and ownership over their personal and confidential information. That's why we've developed a cutting-edge privacy platform powered by AI. Our platform is designed to safeguard confidential information and eliminate digital footprint.\r\n\r\nOur primary objective is to make it easy for users to manage, share, and eliminate their personal and confidential information as needed. With SharePass, users can take control of their data and enjoy peace of mind knowing their information is safe, secure and accessible only when authorised.",
-              "sec_1_title_1": "Personal Data Guardian",
-              "sec_1_image_1": "public/files/2023-05-21T18-18-31.739Z-trust.svg",
-              "sec_1_desc_1": "Protect your confidential information with SharePass's advanced security measures.",
-              "sec_1_title_2": "Privacy for the Organization",
-              "sec_1_image_2": "public/files/2023-05-21T18-18-31.740Z-anyone-can-use.svg",
-              "sec_1_desc_2": "Ensure data privacy compliance and protect sensitive information.",
-              "sec_1_title_3": "Connect with Confidence",
-              "sec_1_image_3": "public/files/2023-05-21T18-18-31.741Z-share.svg",
-              "sec_1_desc_3": "Enjoy worry-free connections knowing your personal information is secure with SharePass.",
-              "sec_2_title": "Mission & Vision",
-              "sec_2_image": "public/files/2023-05-21T18-18-31.741Z-vision-mission_vision-mission.png",
-              "sec_2_desc": "SharePass's mission is to empower users with control over their personal data through cutting-edge privacy solutions.\r\n\r\nOur vision is to become the industry leader in secret sharing, providing trusted and innovative services to safeguard user information.",
-              "sec_3_title": "Multiplatform Solution",
-              "sec_3_image": "public/files/2023-05-21T18-18-32.940Z-Home-2.png",
-              "sec_3_desc": "At SharePass, we understand that managing and sharing personal and confidential information can be a daunting task. That's why we've developed a suite of tools to make the process easy and secure.\r\n\r\nOur ecosystem includes a mobile app with a keyboard, a web app, and a browser extension. Users can use the mobile app to type sensitive information securely on any app, and the browser extension to encrypt information while browsing the web. The web app includes a powerful dashboard that allows users to manage their personal and confidential information, set custom permissions, and control who can access their information.",
-              "sec_4_title": "Meet The Team",
-              "sec_4_desc": "Meet the experts behind SharePass. Our team is dedicated to keeping your data safe and secure, with a wealth of experience and commitment to providing our clients with the highest level of service and support.s",
-              "sec_4_title_1": "Aliquid aspernatur e",
-              "sec_4_image_1": "public\\files\\2023-05-01T18-14-36.334Z-data.png",
-              "sec_4_desc_1": "Consequat Labore in",
-              "sec_4_title_2": "Voluptatem veritati",
-              "sec_4_image_2": "public\\files\\2023-05-01T18-14-36.336Z-data.png",
-              "sec_4_desc_2": "Eu culpa facere volu",
-              "sec_4_title_3": "Quos neque aut omnis",
-              "sec_4_image_3": "public\\files\\2023-05-01T18-14-36.338Z-data.png",
-              "sec_4_desc_3": "Amet natus voluptas",
-              "sec_5_title": "Expedita culpa cons",
-              "sec_5_desc": "Omnis architecto asp",
-              "sec_6_title": "Nam assumenda ullam ",
-              "sec_6_image": "public\\files\\2023-05-01T18-14-36.339Z-data.png",
-              "sec_6_desc": "Qui sapiente deserun",
-              "sec_7_title": "Fugiat ut dolores of",
-              "sec_7_image": "public\\files\\2023-05-01T18-14-36.342Z-data.png",
-              "sec_7_desc": "Placeat fugiat tene",
-              "sec_8_title": "Vero est molestias i",
-              "sec_8_image": "public\\files\\2023-05-01T18-14-36.344Z-data.png",
-              "sec_8_desc": "Autem error enim ess",
-              "createdAt": "2023-05-01T18:14:36.359Z",
-              "updatedAt": "2023-05-21T19:02:35.125Z",
-              "__v": 0
-          }
-      };
-      setData(response.data);
-    };
-*/
   useEffect(() => {
     window.scrollTo(0, 0);
     //aboutDataApi();

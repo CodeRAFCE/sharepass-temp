@@ -3,8 +3,9 @@ import { Fragment, useEffect } from "react";
 import TermsLanding from "../../components/termslanding/TermsLanding";
 import Helmet from 'react-helmet';
 import {defaultMetaDescription, defaultOgImg} from "../../assets/js/blogConfig";
+import { links } from "../../constants/links";
 
-const Cookies = () => {
+const Cookies = ({cookies, setCookies}) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -35,7 +36,7 @@ const Cookies = () => {
     You can find out more about cookies and how to manage them in the
     information below. You can change your cookie settings and disable some or
     all cookies for the website at any time at&nbsp;
-    <a href="#" className="editCookieSettings">
+    <a onClick={() => {setCookies(true);}} className="editCookieSettings">
       here
     </a>
     . You can also change your browser settings so that cookies cannot be placed
@@ -164,7 +165,7 @@ const Cookies = () => {
   </p>
   <p>
     You can change your cookie settings for at any time at{" "}
-    <a href="#" className="editCookieSettings">
+    <a onClick={() => {setCookies(true);}} className="editCookieSettings">
       here
     </a>
     .
@@ -202,11 +203,11 @@ const Cookies = () => {
     By visiting the Website, downloading, or updating the Applications, and/or
     otherwise accessing and/or using the Service after we make any such changes
     to this{" "}
-    <a href="">
+    <a href={links[4].path}>
       <strong>Cookies Policy</strong>
     </a>
     , you are deemed to have accepted such changes. Please refer back to this{" "}
-    <a href="">
+    <a href={links[4].path}>
       <strong>Cookies Policy</strong>
     </a>{" "}
     on a regular basis.

@@ -21,7 +21,7 @@ const Landing = ({ title, para }) => {
     }
 
     const contactSales = () =>{
-        navigate(`/contact`,{state:{motive: 'sales'}});
+        navigate(`/contactsales`);
     };
 
     /*const goToFeature = () => {

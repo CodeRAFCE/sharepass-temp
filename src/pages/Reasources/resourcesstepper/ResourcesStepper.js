@@ -173,6 +173,7 @@ const ResourcesStepper = () => {
                             <button type="button" className={activeStep === 1 ? 'active' : ''} onClick={() => setStepHandler(1)}><span></span>Blog</button>
                             <button type="button" className={activeStep === 2 ? 'active' : ''} onClick={() => setStepHandler(2)}><span></span>Events</button>
                             <button type="button" className={activeStep === 3 ? 'active' : ''} onClick={() => setStepHandler(3)}><span></span>Media</button>
+                            {false && <button type="button" className={activeStep === 4 ? 'active' : ''} onClick={() => setStepHandler(4)}><span></span>Newsletter</button>}
                         </div>
                     </div>
                     <div className="sec_content">
@@ -252,13 +253,13 @@ const ResourcesStepper = () => {
                                     setMediaPage(newPage);
                                 }} type="button" disabled={mediaLoading} >load more</button>
                             </div>}
-                        </div>
+                        </div> 
+                        
+                        {false && <div className="sec sec_media" id='fourth' ref={sectionRefs[3]}>
+                            <SectionTitle title="Newsletter" img={eventbg} />
+                            <div className='sk-ww-linkedin-newsletter' data-embed-id='180765'></div>
+                        </div>}
                     </div>
-                </div>
-
-                <div className="sec sec_media">
-                    <SectionTitle title="Linkedin News" img={eventbg} />
-                    <div className='sk-ww-linkedin-newsletter' data-embed-id='180765'></div>
                 </div>
             </div>
         </section>

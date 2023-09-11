@@ -53,9 +53,10 @@ const Contact = () => {
 
   // You can use useEffect to trigger the verification as soon as the component being loaded
   useEffect(() => {
+    window.scrollTo(0, 0);
     handleReCaptchaVerify();
   }, []);
-
+  
   const validateEmail = (email) => {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -121,6 +122,7 @@ const Contact = () => {
 
   const handleSubmit = async () => {
     console.log("Form data", dataForm);
+    
     //Validate inputs
     if(
       dataForm.emailError ||
@@ -139,12 +141,12 @@ const Contact = () => {
 
     setIsLoading(true);
 
-    /*if (!executeRecaptcha) {
+    if (!executeRecaptcha) {
       console.log("Execute recaptcha not yet available");
       return;
-    }*/
+    }
 
-    //const token = await executeRecaptcha("contact");
+    const token = await executeRecaptcha("contact");
 
     const { email, lastname, name, company, message } = dataForm;
     let body = {
@@ -155,9 +157,9 @@ const Contact = () => {
       company
     };
 
-    /*if (token) {
+    if (token) {
       body.token = token;
-    }*/
+    }
 
     try {
       const response = await fetch(`${apiUrl}wp-json/custom-contact/v1/form`, {
@@ -209,9 +211,9 @@ const Contact = () => {
         <section className="about_landing">
             <div className='content_sec'>
                 <div className="text_wraper">
-                    <TinyTitle title="Improve your cibersecurity" />
+                    <TinyTitle title="If you Have questions" />
                     <h1>Contact Us</h1>
-                    <p className="para">If you are willing to implement cybersecurity messures and incorporating digital footprint management solution to your company, please don't hesitate and reach out to us today.</p>
+                    <p className="para">Connect with us effortlessly through our contact form. Whether you have inquiries, suggestions, or any proposals, this is your direct gateway to reaching our team. We value your input and look forward to engaging with you. Drop us a message, and let's begin the conversation.</p>                    
                 </div>
             </div>
         </section>
@@ -400,7 +402,7 @@ const Contact = () => {
                   />
                 </svg>
                 : 
-                <svg xmlns="http://www.w3.org/2000/svg" width="25%" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="25%" fill="currentColor" className="bi bi-check-circle" viewBox="0 0 16 16"> 
                   <path color="#4ffbaa" d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/> 
                   <path color="#4ffbaa" d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/> 
                 </svg>

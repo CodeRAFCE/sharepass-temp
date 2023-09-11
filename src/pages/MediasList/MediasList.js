@@ -61,7 +61,7 @@ const MediasList = () => {
 
                     <div className="content_grid">
                         {data && data.map((info, k) => (
-                            <BlockCard title={info.title? info.title.rendered : ""} img={info.fimg_url} postType="media" subcategory="Media" id={info.slug} date={formatDate(info.date)} />
+                            <BlockCard key={k} title={info.title? info.title.rendered : ""} img={info.fimg_url} postType="media" subcategory="Media" id={info.slug} date={formatDate(info.date)} />
                         ))}
                     </div>
 
@@ -70,7 +70,7 @@ const MediasList = () => {
                             const newPage = page + 1;
                             await getMedias(newPage);
                             setPage(newPage);
-                        }} type="button" disabled={isLoading}>load more</button>
+                        }} type="button" className="btn_purple" disabled={isLoading}>load more</button>
                     </div>}
                 </div>
                 

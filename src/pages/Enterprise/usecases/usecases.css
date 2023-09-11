@@ -13,12 +13,12 @@
 }
 
 .use_cases .content_sec .card_grid .card {
-  background-color: #fff;
+  background-color: #f5f6fc;
   min-height: 500px;
   padding: 20px;
   position: relative;
   overflow: hidden;
-  border:5px solid #ffffff;
+  border:5px solid #f5f6fc;
   transition:all 0.4s ease-in-out;
 }
 

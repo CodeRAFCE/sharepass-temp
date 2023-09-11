@@ -2,9 +2,13 @@
     padding:100px 0px 0px;
 }
 
+.partners_info h2{
+    text-align: center;
+}
+
 .partners_info p{
     margin-top:20px;
-    padding-right:400px;
+    text-align: center;
 }
 
 .partners_info .img_alides{

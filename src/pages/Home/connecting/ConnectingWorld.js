@@ -14,7 +14,7 @@ const ConnectingWorld = ({ image, title, para }) => {
                         />
                     </div>
                     <div className="text_wrap">
-                        <TinyTitle title="Home" textcolor='#fff' 
+                        <TinyTitle title="Technology" textcolor='#fff' 
                         />
                         <h2>{title}</h2>
                         <p className="para">{para}</p>

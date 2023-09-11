@@ -1,5 +1,6 @@
 
 import './App.css';
+import { useState } from "react";
 
 import Header from './components/Header/Header';
 import {Route, Routes, Outlet} from 'react-router-dom';
@@ -7,8 +8,11 @@ import {Route, Routes, Outlet} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from "./pages/About/About";
 import Contact from "./pages/contact/Contact";
+import ContactSales from "./pages/ContactSales/ContactSales";
 import Resources from "./pages/Reasources/Reasources";
 import Partners from "./pages/Partners/Partners";
+import BecomePartner from "./pages/BecomePartner/BecomePartner";
+import Whitepaper from "./pages/Whitepaper/Whitepaper";
 import Pricing from './pages/Pricing/Pricing';
 import OurTeam from "./pages/OurTeam/OurTeam";
 import BlogDetail from "./pages/blogdetail/BlogDetail";
@@ -33,9 +37,18 @@ import RegisterInterest from "./pages/RegisterInterest/RegisterInterest";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import frontendConfigApp from "./assets/js/config";
 import VerifyEmail from './pages/VerifyEmail/VerifyEmail';
+import WebPortal from './pages/VideoGuides/WebPortal';
+import SharePassOne from './pages/VideoGuides/SharePassOne';
 import { BrowserRouter as Router} from 'react-router-dom';
+import Roadmap from './pages/Roadmap/Roadmap';
+import RoadmapDetail from './pages/RoadmapDetail/RoadmapDetail';
+import KnowledgeBase from './pages/KnowledgeBase/KnowledgeBase';
+import VideoLibrary from './pages/VideoGuides/VideoLibrary';
 
 function App() {
+
+  const [cookies, setCookies] = useState(false);
+
   return (
     <Router>
       <div className='app'>
@@ -51,7 +64,7 @@ function App() {
         <Route path='/blog/:id' element={<BlogDetail />} />
         <Route path='/event/:id' element={<EventDetail />} />
         <Route path='/media/:id' element={<MediaDetail />} />
-        <Route path='/validate-email/:code' element={<VerifyEmail />} />
+        <Route path='/validate-email/:code/:id' element={<VerifyEmail />} />
         <Route path='/blogs' element={<BlogsList />} />
         <Route path='/events' element={<EventsList />} />
         <Route path='/medias' element={<MediasList />} />
@@ -63,24 +76,32 @@ function App() {
         <Route path='/subscription-terms' element={<Subscription />} />
         <Route path='/permitted-use-policy' element={<Permitted />} />
         <Route path='/privacy-policy' element={<Privacy />} />
-        <Route path='/cookies-policy' element={<Cookies />} />
+        <Route path='/cookies-policy' element={<Cookies cookies={cookies} setCookies={setCookies} />} />
         <Route path='/faq' element={<FAQ />} />
         <Route path='/register-your-interest' element={<RegisterInterest />} />
         <Route path='/enterprise' element={<Enterprise />} />
-        <Route path='/technology' element={<Technology />} />
-        <Route path='/signup' element={
-          <GoogleReCaptchaProvider reCaptchaKey={frontendConfigApp.recaptcha_site_keys}>
-            <Signup />
-          </GoogleReCaptchaProvider>
-        } />
-        <Route path='/contact' element={
-            <GoogleReCaptchaProvider reCaptchaKey={frontendConfigApp.recaptcha_site_keys}>
-              <Contact />
-            </GoogleReCaptchaProvider>
-          } />
+        {false && <Route path='/technology' element={<Technology />} />}
+        
         <Route path='/signin' element={<Login />} />
+        <Route path='/howto/sharepassone' element={<SharePassOne />} />
+        <Route path='/howto/webportal' element={<WebPortal />} />
+        <Route path='/roadmap' element={<Roadmap />} />
+        <Route path='/roadmap/:id' element={<RoadmapDetail />} />
+        <Route path='/knowledgebase' element={<KnowledgeBase />} />
+        <Route path='/videolibrary' element={<VideoLibrary />} />
       </Routes>
-      <Footer />
+
+      <GoogleReCaptchaProvider reCaptchaKey={frontendConfigApp.recaptcha_site_keys}>
+        <Routes>
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/contactsales' element={<ContactSales />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/whitepaper' element={<Whitepaper />}  />
+          <Route path='/becomepartner' element={<BecomePartner />}  />
+        </Routes>
+      </GoogleReCaptchaProvider>
+
+      <Footer cookies={cookies} setCookies={setCookies} />
       </div>
     </Router>
   );

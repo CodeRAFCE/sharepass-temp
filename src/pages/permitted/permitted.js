@@ -3,6 +3,7 @@ import { Fragment, useEffect } from "react";
 import TermsLanding from "../../components/termslanding/TermsLanding";
 import Helmet from 'react-helmet';
 import {defaultMetaDescription, defaultOgImg} from "../../assets/js/blogConfig";
+import { links } from "../../constants/links";
 
 const Permitted = () => {
     useEffect(() => {
@@ -26,19 +27,19 @@ const Permitted = () => {
                     <h2>PERMITTED USE POLICY</h2>
                     <p>
     This{" "}
-    <a href="">
+    <a href={links[2].path}>
       <strong>Permitted Use Policy</strong>
     </a>{" "}
     supplements the{" "}
     <strong>
-      <a href="">Terms of Service</a>
+      <a  href={links[0].path}>Terms of Service</a>
     </strong>{" "}
     and further defines your rights and obligations when using the
     Service.&nbsp;
   </p>
   <p>
     This{" "}
-    <a href="">
+    <a href={links[2].path}>
       <strong>Permitted Use Policy</strong>
     </a>{" "}
     may be revised from time to time, without any obligation to notify
@@ -46,7 +47,7 @@ const Permitted = () => {
   </p>
   <p>
     Your use of Service after changes to this{" "}
-    <a href="">
+    <a href={links[2].path}>
       <strong>Permitted Use Policy</strong>
     </a>{" "}
     are made available through the Service shall constitute your acceptance of
@@ -77,12 +78,12 @@ const Permitted = () => {
     <strong>
       THE RESPONSIBILITY FOR AVOIDING THE ACTIVITIES THAT ARE HARMFUL OR VIOLATE
       THIS{" "}
-      <a href="">
+      <a href={links[2].path}>
         <strong>PERMITTED USE POLICY</strong>
       </a>{" "}
       RESTS PRIMARILY WITH YOU. WE DO NOT (AND CANNOT) READ OR MONITOR THE
       CONTENTS OF THE MESSAGES OF OUR USERS TO ENSURE THAT THEY COMPLY WITH THIS{" "}
-      <a href="">
+      <a href={links[2].path}>
         <strong>PERMITTED USE POLICY</strong>
       </a>
       , THE TERMS OF SERVICE OR THE APPLICABLE LAW.&nbsp;
@@ -90,12 +91,12 @@ const Permitted = () => {
   </p>
   <p>
     You violate the{" "}
-    <a href="">
+    <a href={links[2].path}>
       <strong>Permitted Use Policy</strong>
     </a>{" "}
     and the{" "}
     <strong>
-      <a href="">Terms of Service</a>
+      <a href={links[0].path}>Terms of Service</a>
     </strong>{" "}
     when you engage in or facilitate the following prohibited activities:
   </p>
@@ -222,7 +223,7 @@ const Permitted = () => {
   <p>
     <strong>
       IF WE BECOME AWARE OF ACTIVITIES THAT ARE HARMFUL OR VIOLATE THIS{" "}
-      <a href="">
+      <a href={links[2].path}>
         <strong>PERMITTED USE POLICY</strong>
       </a>{" "}
       OR TERMS OF SERVICE, WE MAY TAKE ANY ACTION AS WE DEEM NECESSARY

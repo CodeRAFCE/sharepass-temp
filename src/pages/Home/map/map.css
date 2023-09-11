@@ -112,6 +112,16 @@ font-size:14px;
   text-align: center;
 }
 
+.map_mobile {
+  display: none;
+  text-align: center;
+  margin: 60px auto;
+}
+
+.map_mobile img {
+  max-width: 100%;
+}
+
 @media only screen and (max-width:800px){
     .map .map_wrap .location{
         height:25px;
@@ -150,6 +160,10 @@ font-size:14px;
       font-weight: 600;
       font-size: 1rem;
       text-align: center;
+    }
+
+    .map_mobile {
+      display: block;
     }
 }
 @media only screen and (min-width:801px){

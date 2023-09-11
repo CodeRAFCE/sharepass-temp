@@ -29,7 +29,7 @@ const leadersInfo = [
     {
         id: 1,
         profile: leaderb,
-        name: 'Mauro Osorio',
+        name: 'Mauro Garcia Osorio',
         post: 'COO, SharePass',
         linkedin:'https://www.linkedin.com/in/garciaosorio/',
     },
@@ -61,13 +61,13 @@ const leadersInfo = [
         post: 'CISO',
         linkedin:'https://www.linkedin.com/in/marc-castejon/',
     },
-    {
+    /*{
         id: 6,
         profile: leaderg,
         name: 'Navoda Bandara',
         post: 'Automation officer',
         linkedin:'https://www.linkedin.com/in/navoda-semasinghe/',
-    },
+    },*/
 
 ]
 

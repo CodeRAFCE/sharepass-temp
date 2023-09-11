@@ -92,7 +92,7 @@ const WistiaVideo = ({play=false, closePopup }) => {
         playbackRateControl: true,
         smallPlayButton: true,
         stillUrl:  window.location.protocol + '//' + window.location.host + "/assets/img/video-bg.jpg",
-        playerColor: "#1d8cf8",
+        playerColor: "#09182c",
         plugin: {
           "captions-v1": {
             onByDefault: true,

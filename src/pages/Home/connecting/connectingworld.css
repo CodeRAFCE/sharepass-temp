@@ -1,5 +1,7 @@
-.connecting {
-  margin: 100px 0px;
+.connecting .content_sec {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
 .connecting .content_sec .grid_sec {

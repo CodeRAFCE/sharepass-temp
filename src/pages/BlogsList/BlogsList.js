@@ -61,7 +61,7 @@ const BlogsList = () => {
 
                     <div className="content_grid">
                         {data && data.map((info, k) => (
-                            <BlockCard title={info.title? info.title.rendered : ""} img={info.fimg_url} type={"Blog"} id={info.slug} date={formatDate(info.date)} />
+                            <BlockCard key={k} title={info.title? info.title.rendered : ""} img={info.fimg_url} type={"Blog"} id={info.slug} date={formatDate(info.date)} />
                         ))}
                     </div>
 
@@ -70,7 +70,7 @@ const BlogsList = () => {
                             const newPage = page + 1;
                             await getBlogs(newPage);
                             setPage(newPage);
-                        }} type="button" disabled={isLoading}>load more</button>
+                        }} type="button" className="btn_purple" disabled={isLoading}>load more</button>
                     </div>}
                 </div>
                 

@@ -29,9 +29,9 @@ export const links = [
         link: "FAQ",
         path: "/faq"
     },
-    {
+    /*{
         id: 6,
         link: "Developer",
         path: "https://developers.sharepass.com"
-    }
+    }*/
 ];

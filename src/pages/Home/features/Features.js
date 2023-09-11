@@ -6,8 +6,10 @@ import {InView} from "react-intersection-observer";
 import {Player} from "@lottiefiles/react-lottie-player";
 
 // mp4s
-import timeControlled from "../../../assets/videos/new/time-controlled.mp4";
-import mobilePrivacy from "../../../assets/videos/new/privacy-message.mp4";
+import timeControlled from "../../../assets/animations/Time-Controlled-Secrets.mp4";
+import timeControlledVer from "../../../assets/animations/Time-Controlled-Secrets-ver.mp4";
+import mobilePrivacy from "../../../assets/animations/Mobile-Privacy.mp4";
+import mobilePrivacyVer from "../../../assets/animations/Mobile-Privacy-ver.mp4";
 
 import Envelope from "../../../pages/Enterprise/envelope/Envelope";
 // lottie file
@@ -21,7 +23,27 @@ const Features = (props) => {
 
 	return (
 		<Fragment>
-			<section className="features_sec" id="features">
+			<section className="section-container">
+				<div className="content-wrapper content-wrapper-center-start">
+					<div className="content-wrap pad-left">
+						<h2>Time-Controlled Secrets</h2>
+						<p>Empower users with personalized access to sensitive data that offer scheduled releases, time-limited availability, and single or multiple access options for a superior user experience.</p>
+					</div>
+					<video className="desktop-video" src={timeControlled} autoPlay loop playsInline muted></video>
+					<video className="mobile-video" src={timeControlledVer} autoPlay loop playsInline muted></video>
+				</div>
+			</section>
+			<section className="section-container">
+				<div className="content-wrapper content-wrapper-center-end">
+					<div className="dark-content pad-left">
+						<h2>Your Mobile Privacy solution</h2>
+						<p>The AI-powered SharePass Keyboard secures your data on any app, eliminating digital footprints. Protect your privacy on any mobile app.</p>
+					</div>
+					<video className="desktop-video" src={mobilePrivacy} autoPlay loop playsInline muted></video>
+					<video className="mobile-video" src={mobilePrivacyVer} autoPlay loop playsInline muted></video>
+				</div>
+			</section>
+			{false && <section className="features_sec" id="features">
 				<div className="content_sec">
 					<InView
 						onChange={(inView, entry) => {
@@ -123,7 +145,7 @@ const Features = (props) => {
 						</InView>
 					)}
 				</div>
-			</section>
+			</section>}
 
 			<Envelope />
 		</Fragment>

@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import {Player} from "@lottiefiles/react-lottie-player";
 
 // mp4s
-import seamlessIntegration from "../../../assets/videos/new/seamless-integration.mp4";
+import seamlessIntegration from "../../../assets/animations/Seamless-integration.mp4";
 
 // lottie files
 // import seamlessIntegration from "../../../assets/lottie/seemless-integration.json";

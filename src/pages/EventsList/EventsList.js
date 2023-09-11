@@ -89,7 +89,7 @@ const EventsList = () => {
                             const newPage = page + 1;
                             await getEvents(newPage);
                             setPage(newPage);
-                        }} type="button" disabled={isLoading}>load more</button>
+                        }} type="button" className="btn_purple" disabled={isLoading}>load more</button>
                     </div>}
                 </div>
                 

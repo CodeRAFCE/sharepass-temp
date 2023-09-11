@@ -2,7 +2,7 @@ import "./singleblog.css";
 import { useState } from "react";
 import Helmet from 'react-helmet';
 import {defaultMetaDescription, defaultMetaTitle,defaultOgImg} from "../../../assets/js/blogConfig";
-import { estimateReadingTime } from "../../../services/utils";
+import { estimateReadingTime, cleanTags, decodeHtml } from "../../../services/utils";
 
 const SingleBlog = (props) => {
     const [speaking, setSpeaking] = useState(false);
@@ -50,30 +50,21 @@ const SingleBlog = (props) => {
     ){
       category = props._embedded["wp:term"][0][0].name;
     }*/
-
-    /**
-     * OG and Meta values
-     */
-    function cleanTags(htmlString) {
-      var div = document.createElement("div");
-      div.innerHTML = htmlString;
-      return (div.innerText);
-    }
     
     const metaDescription = props.content && props.content.rendered ? cleanTags(props.content.rendered) : defaultMetaDescription;
     return (
         <div className="single_blog">
             <Helmet>
-              <title>{props.title && props.title.rendered ? `${props.title.rendered} | SharPass` : defaultMetaTitle}</title>
+              <title>{props.title && props.title.rendered ? `${decodeHtml(props.title.rendered)} | SharPass` : defaultMetaTitle}</title>
               <meta property="description" content={metaDescription.length > 200 ? metaDescription.substring(0,197) + "..."  : metaDescription} />
-              <meta property="og:title" content={props.title && props.title.rendered ? `${props.title.rendered} | SharPass` : defaultMetaTitle} />
+              <meta property="og:title" content={props.title && props.title.rendered ? `${decodeHtml(props.title.rendered)} | SharPass` : defaultMetaTitle} />
               <meta property="og:description" content={metaDescription.length > 200 ? metaDescription.substring(0,197) + "..."  : metaDescription} />
               <meta property="og:image" content={props.fimg_url? props.fimg_url : defaultOgImg} />
             </Helmet>
             <div className="date_line">
                 <div className="tag">Blog</div>
                 <p className="date">  {props.date ? formatDate(props.date) : ''}</p>
-                <button onClick={handleSpeak} style={{ border: "none" }}>
+                <button onClick={handleSpeak} className="speak-article" style={{ border: "none" }}>
                     <svg version="1.0"
                         width="14.000000pt" height="14.000000pt" viewBox="0 0 512.000000 512.000000"
                         preserveAspectRatio="xMidYMid meet">
@@ -99,7 +90,7 @@ const SingleBlog = (props) => {
                     </svg>
                 </button>
             </div>
-            <h1 className="blogtitle">{props.title && props.title.rendered ? props.title.rendered : ''}</h1>
+            <h1 className="blogtitle">{props.title && props.title.rendered ? decodeHtml(props.title.rendered) : ''}</h1>
             <div className="timing">
                 <svg
                     width={24}

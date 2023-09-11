@@ -3,6 +3,7 @@ import { Fragment, useEffect } from "react";
 import TermsLanding from "../../components/termslanding/TermsLanding";
 import Helmet from 'react-helmet';
 import {defaultMetaDescription, defaultOgImg} from "../../assets/js/blogConfig";
+import { links } from "../../constants/links";
 
 const Subscription = () => {
     useEffect(() => {
@@ -40,23 +41,23 @@ const Subscription = () => {
     By submitting your payment details, you (i) confirm your acceptance of the
     offer advertised; (ii) accept and agree to these{" "}
     <strong>
-      <a href="">Subscription Terms</a>
+      <a href={links[1].path}>Subscription Terms</a>
     </strong>{" "}
     and hereby; and (iii) acknowledge and agree to our&nbsp;
     <strong>
-      <a href="">Terms of Service</a>
+      <a href={links[0].path}>Terms of Service</a>
     </strong>{" "}
     and{" "}
     <strong>
-      <a href="">Permitted Use Policy</a>
+      <a href={links[2].path}>Permitted Use Policy</a>
     </strong>{" "}
     and{" "}
     <strong>
-      <a href="">Privacy Policy</a>
+      <a href={links[3].path}>Privacy Policy</a>
     </strong>{" "}
     and{" "}
     <strong>
-      <a href="">Cookies Policy</a>
+      <a href={links[4].path}>Cookies Policy</a>
     </strong>
     .
   </p>
@@ -68,7 +69,7 @@ const Subscription = () => {
     renewed, and you will be charged the then-current price of the Service. For
     more information, read our&nbsp;
     <strong>
-      <a href="">Terms of Services</a>
+      <a href={links[0].path}>Terms of Services</a>
     </strong>
     .
   </p>
@@ -108,7 +109,7 @@ const Subscription = () => {
     service period. For further information about the Refund and Cancellation
     Policy, read our&nbsp;
     <strong>
-      <a href="">Terms of Services</a>
+      <a href={links[0].path}>Terms of Services</a>
     </strong>
     .
   </p>

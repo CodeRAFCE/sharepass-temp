@@ -13,6 +13,7 @@ import {apiBaseUrl} from "../../assets/js/blogConfig";
 import 'react-toastify/dist/ReactToastify.css';
 import defaultImage from "../../assets/images/default.webp";
 import { DiscussionEmbed } from 'disqus-react';
+import BlockCard from "../Reasources/resourcesstepper/blockcard/BlockCard";
 
 const MediaDetail = () => {
     
@@ -120,7 +121,7 @@ const MediaDetail = () => {
                     {relatedPost.map((data) => {
                        
 
-                        return (
+                        /*return (
                             <Fragment key={data.slug}>
                                 <div className="blog" onClick={() => goBlogDetail(data.slug)}>
                                     <div className="date_line">
@@ -158,6 +159,12 @@ const MediaDetail = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </Fragment>
+                        )*/
+                        
+                        return (
+                            <Fragment key={data.slug}>
+                                <BlockCard title={data.title? data.title.rendered : ""} img={data.fimg_url} subcategory={'Media'} postType={'media'} id={data.slug} date={formatDate(data.date)} />
                             </Fragment>
                         )
                     })}

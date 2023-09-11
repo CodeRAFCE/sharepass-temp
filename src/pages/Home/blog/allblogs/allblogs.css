@@ -6,7 +6,7 @@
 
 .blog_grid .blog{
     padding:40px;
-    background-color:#fff;
+    background-color:#f5f6fc;
     transition:all 0.3s ease-in-out;
     position:relative;
     overflow: hidden;

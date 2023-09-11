@@ -1,5 +1,7 @@
 .about_landing .text_wraper {
   margin-top: 100px;
+  
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,6 +49,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0px 50px;
+  justify-content: center;
   text-align: center;
 }
 
@@ -111,6 +114,10 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .row-grids {
+    display: block;
+  }
+  
   .about_landing .tri_grid_no_vertical_padding {
     display: none!important;
   }

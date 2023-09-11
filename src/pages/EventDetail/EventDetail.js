@@ -13,6 +13,7 @@ import {apiBaseUrl} from "../../assets/js/blogConfig";
 import 'react-toastify/dist/ReactToastify.css';
 import defaultImage from "../../assets/images/default.webp";
 import { DiscussionEmbed } from 'disqus-react';
+import BlockCard from "../Reasources/resourcesstepper/blockcard/BlockCard";
 
 const EventDetail = () => {
     
@@ -41,7 +42,7 @@ const EventDetail = () => {
             /*get other posts*/
             
             //await axios.get(`${apiBaseUrl}posts?per_page=4&_embed=wp:term`).then((related) => {
-            await axios.get(`${apiBaseUrl}event?before=${res.data[0].date}&_embed`).then((related) => {
+            await axios.get(`${apiBaseUrl}event?before=${res.data[0].date}&per_page=3`).then((related) => {
                 if(related && related.data && related.data.length > 0){
                     let includedFlag = false;
                     for(let i = 0, size = related.data.length; i < size; i++){
@@ -76,7 +77,7 @@ const EventDetail = () => {
     }
 
     const goBlogDetail = (id) => {
-        navigate(`/blog/${id}`);
+        navigate(`/event/${id}`);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -117,23 +118,12 @@ const EventDetail = () => {
                 <h2 className="post_title">More Events</h2>
                 <div className="post_grid">
                     {relatedPost.map((data) => {
-                        let category;
 
-                        if(
-                            data._embedded && 
-                            data._embedded["wp:term"] && 
-                            data._embedded["wp:term"].length > 0 && 
-                            data._embedded["wp:term"][0].length > 0 &&
-                            data._embedded["wp:term"][0][0].name
-                        ){
-                            category = data._embedded["wp:term"][0][0].name;
-                        }
-
-                        return (
+                        /*return (
                             <Fragment key={data.slug}>
                                 <div className="blog" onClick={() => goBlogDetail(data.slug)}>
                                     <div className="date_line">
-                                        <button type="button">{category}</button>
+                                        <button type="button">Event</button>
                                         <p className="date">{data.date ? formatDate(data.date) : ''}</p>
                                     </div>
                                     <h3>{data.title && data.title.rendered ? data.title.rendered : ''}</h3>
@@ -145,7 +135,7 @@ const EventDetail = () => {
                                    
                                     <div className="overlay">
                                         <div className="date_line">
-                                            <button type="button">{category}</button>
+                                            <button type="button">Event</button>
                                             <p className="date">{data.date ? formatDate(data.date) : ''}</p>
                                         </div>
                                         <h3>{data.title && data.title.rendered ? data.title.rendered : ''}</h3>
@@ -167,6 +157,11 @@ const EventDetail = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </Fragment>
+                        )*/
+                        return (
+                            <Fragment key={data.slug}>
+                                <BlockCard title={data.title? data.title.rendered : ""} img={data.fimg_url} subcategory={'Event'} postType={'event'} id={data.slug} date={formatDate(data.date)} />
                             </Fragment>
                         )
                     })}

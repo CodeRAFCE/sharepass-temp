@@ -2,9 +2,13 @@
     padding:100px 0px;
 }
 
+.distributors_info h2 {
+    text-align: center;
+}
+
 .distributors_info p{
     margin-top:20px;
-    padding-right:400px;
+    text-align: center;
 }
 
 .distributors_info .img_alides{

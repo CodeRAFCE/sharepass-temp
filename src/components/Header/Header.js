@@ -35,8 +35,9 @@ function Header() {
                         <NavLink to="/about">About</NavLink>
                         <NavLink to="/resources">Resources</NavLink>
                         <NavLink to="/enterprise">Enterprise</NavLink>
+                        <NavLink to="/roadmap">Roadmap</NavLink>
                         {false && <NavLink to="/pricing">Pricing</NavLink>}
-                        <NavLink to="/technology">Technology</NavLink>
+                        {false && <NavLink to="/technology">Technology</NavLink>}
                         <a href="/signin" ><button type='button'>Sign in</button></a>
                     </div>
                     <div className={`menu ${status ? 'close' : 'open'}`} onClick={menuToggler} >
@@ -1496,14 +1497,18 @@ function Header() {
                         Enterprise
                         {arrow}
                     </NavLink>
+                    <NavLink to="/roadmap" onClick={closeMenu} >
+                        Roadmap
+                        {arrow}
+                    </NavLink>
                     {false && <NavLink to="/pricing" onClick={closeMenu} >
                         Pricing
                         {arrow}
                     </NavLink>}
-                    <NavLink to="/technology" onClick={closeMenu} >
+                    {false && <NavLink to="/technology" onClick={closeMenu} >
                         Technology
                         {arrow}
-                    </NavLink>
+                    </NavLink>}
                 </div>
                 <a href="/signin" >
                     <div className="btn_wrap">

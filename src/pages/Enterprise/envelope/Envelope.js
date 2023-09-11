@@ -2,7 +2,8 @@ import './envelope.css';
 import http1 from '../../variables';
 import { Fragment, useRef, useEffect, useState } from 'react';
 import { InView } from 'react-intersection-observer';
-import envelopeVideo from "../../../assets/animations/SharePass-Envelope.mp4";
+import envelopeVideo from "../../../assets/animations/Envelope.mp4";
+import envelopeVideoVer from "../../../assets/animations/Envelope-ver.mp4";
 import {Player} from "@lottiefiles/react-lottie-player";
 
 // lottie files
@@ -15,7 +16,7 @@ const Envelope = (props) => {
 
     return (
         <Fragment>
-            <section className='features_sec' id='features'>
+            {false && <section className='features_sec' id='features'>
                 <div className='content_sec'>
                     <InView onChange={(inView, entry) => {
                         if (inView) {
@@ -44,7 +45,26 @@ const Envelope = (props) => {
                         </div>
                     </InView>
                 </div>
-            </section>
+            </section>}
+            <InView onChange={(inView, entry) => {
+                if (inView) {
+                    setFirst(true)
+                } else {
+                    setFirst(false)
+                }
+            }}>
+                <section className="section-container">
+                    
+                        <div className="content-wrapper content-wrapper-center-end">
+                                <div className="content-wrap pad-left">
+                                    <h2>Receive data securely</h2>
+                                    <p>Use our envelope feature to request confidential data from third parties securely and smoothly</p>
+                                </div>
+                                <video className="desktop-video" src={envelopeVideo} autoPlay loop playsInline muted></video>
+                                <video className="mobile-video" src={envelopeVideoVer} autoPlay loop playsInline muted></video>
+                        </div>
+                </section>
+            </InView>
         </Fragment>
     )
 }
