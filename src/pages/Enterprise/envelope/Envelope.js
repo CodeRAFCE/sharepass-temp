@@ -9,6 +9,10 @@ import envelopeVideoVer from "../../../assets/animations/Envelope-ver.mp4";
 import envelopeVideoDesktop from "../../../assets/webm/envelope-desktop.webm";
 import envelopeVideoMobile from "../../../assets/webm/envelope-mobile.webm";
 
+// fallback images
+import envelopeDesktopImage from "../../../assets/fallback_images/enevelope-desktop.png";
+import envelopeMobileImage from "../../../assets/fallback_images/enevelope-mobile.png";
+
 import {Player} from "@lottiefiles/react-lottie-player";
 
 // lottie files

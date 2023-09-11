@@ -15,6 +15,12 @@ import mobilePrivacyVer from "../../../assets/animations/Mobile-Privacy-ver.mp4"
 import mobilePrivacyDesktop from "../../../assets/webm/mobile-privacy-desktop.webm";
 import mobilePrivacyMobile from "../../../assets/webm/mobile-privacy-mobile.webm";
 
+// fallback images
+import timeControlledDesktopImage from "../../../assets/fallback_images/time-controlled-desktop.png";
+import timeControlledMobileImage from "../../../assets/fallback_images/time-controlled-mobile.png";
+import mobilePrivacyDesktopImage from "../../../assets/fallback_images/mobile-privacy-desktop.png";
+import mobilePrivacyMobileImage from "../../../assets/fallback_images/mobile-privacy-mobile.png";
+
 import Envelope from "../../../pages/Enterprise/envelope/Envelope";
 // lottie file
 // import timeControlled from "../../../assets/lottie/time-controlled.json";
@@ -24,6 +30,20 @@ const Features = (props) => {
 	const [first, setFirst] = useState(false);
 	const [second, setSecond] = useState(false);
 	const [third, setThird] = useState(false);
+
+	const timeControlledRef = useRef();
+	const mobilePrivacyRef = useRef();
+
+	const playVideo = (videoRef) => {
+		if (videoRef.current) {
+			videoRef.current.play();
+		}
+	};
+
+	useEffect(() => {
+		playVideo(timeControlledRef);
+		playVideo(mobilePrivacyRef);
+	}, []);
 
 	return (
 		<Fragment>
@@ -37,13 +57,23 @@ const Features = (props) => {
 							superior user experience.
 						</p>
 					</div>
-					<video className="desktop-video" autoPlay loop playsInline muted>
+					<video className="desktop-video" ref={timeControlledRef} autoPlay loop playsInline muted>
 						<source src={timeControlled} type="video/mp4" />
 						{/* <source src={timeControlled} type="video/webm" /> */}
+						<img
+							src={timeControlledDesktopImage}
+							alt="mobile privacy desktop"
+							style={{width: "100%", height: "100%", objectFit: "cover"}}
+						/>
 					</video>
-					<video className="mobile-video" autoPlay loop playsInline muted>
+					<video className="mobile-video" ref={mobilePrivacyRef} autoPlay loop playsInline muted>
 						<source src={timeControlledVer} type="video/mp4" />
 						{/* <source src={timeControlledVer} type="video/webm" /> */}
+						<img
+							src={timeControlledMobileImage}
+							alt="mobile privacy desktop"
+							style={{width: "100%", height: "100%", objectFit: "cover"}}
+						/>
 					</video>
 				</div>
 			</section>
@@ -60,10 +90,20 @@ const Features = (props) => {
 					<video className="desktop-video" autoPlay loop playsInline muted>
 						<source src={mobilePrivacy} type="video/mp4" />
 						<source src={mobilePrivacyDesktop} type="video/webm" />
+						<img
+							src={mobilePrivacyDesktopImage}
+							alt="mobile privacy desktop"
+							style={{width: "100%", height: "100%", objectFit: "cover"}}
+						/>
 					</video>
 					<video className="mobile-video" autoPlay loop playsInline muted>
 						<source src={mobilePrivacyVer} type="video/mp4" />
 						<source src={mobilePrivacyMobile} type="video/webm" />
+						<img
+							src={mobilePrivacyMobileImage}
+							alt="mobile privacy mobile"
+							style={{width: "100%", height: "100%", objectFit: "cover"}}
+						/>
 					</video>
 				</div>
 			</section>
