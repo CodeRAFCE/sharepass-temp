@@ -1,20 +1,22 @@
 import "./features.css";
 import http1 from "../../variables";
-// import videojs from "video.js";
-import "video.js/dist/video-js.css"; // Import the CSS for video.js
+import ReactPlayer from "react-player";
+
 import {Fragment, useRef, useEffect, useState} from "react";
 import {InView} from "react-intersection-observer";
 // import Lottie from "react-lottie-player";
 import {Player} from "@lottiefiles/react-lottie-player";
 
 // Import your videos
-import timeControlledDesktop from "../../../assets/animations/Time-Controlled-Secrets.mp4";
-import timeControlledMobile from "../../../assets/animations/Time-Controlled-Secrets-ver.mp4";
+import timeControlledDesktop from "../../../assets/videos/compressed/time-controlled-hor.mp4";
+import timeControlledMobile from "../../../assets/videos/compressed/time-controlled-ver.mp4";
+
 import mobilePrivacyDesktop from "../../../assets/animations/Mobile-Privacy.mp4";
 import mobilePrivacyMobile from "../../../assets/animations/Mobile-Privacy-ver.mp4";
+
 // Import webm versions if available
-import timeControlledDesktopWebm from "../../../assets/animations/Time-Controlled-Secrets.webm";
-// import timeControlledMobileWebm from "../../../assets/animations/Time-Controlled-Secrets-ver.mp4";
+import timeControlledDesktopWebm from "../../../assets/webm/time-controlled-hor.webm";
+import timeControlledMobileWebm from "../../../assets/webm/time-controlled-ver.webm";
 import mobilePrivacyDesktopWebm from "../../../assets/webm/mobile-privacy-desktop.webm";
 import mobilePrivacyMobileWebm from "../../../assets/webm/mobile-privacy-mobile.webm";
 
@@ -30,15 +32,15 @@ import Envelope from "../../../pages/Enterprise/envelope/Envelope";
 //import mobilePrivacy from "../../../assets/lottie/privacy-solution.json";
 
 const Features = (props) => {
-	const [first, setFirst] = useState(false);
-	const [second, setSecond] = useState(false);
-	const [third, setThird] = useState(false);
+	// const [first, setFirst] = useState(false);
+	// const [second, setSecond] = useState(false);
+	// const [third, setThird] = useState(false);
 
-	const timeControlledDesktopRef = useRef();
-	const timeControlledMobileRef = useRef();
+	// const timeControlledDesktopRef = useRef();
+	// const timeControlledMobileRef = useRef();
 
-	const mobilePrivacyDesktopRef = useRef();
-	const mobilePrivacyMobileRef = useRef();
+	// const mobilePrivacyDesktopRef = useRef();
+	// const mobilePrivacyMobileRef = useRef();
 
 	return (
 		<Fragment>
@@ -52,15 +54,7 @@ const Features = (props) => {
 							superior user experience.
 						</p>
 					</div>
-					<video
-						className="desktop-video"
-						ref={timeControlledDesktopRef}
-						poster={timeControlledDesktopImage}
-						autoPlay
-						loop
-						playsInline
-						muted
-					>
+					<video className="desktop-video" preload autoPlay loop playsInline muted>
 						<source src={timeControlledDesktop} type="video/mp4" />
 						<source src={timeControlledDesktopWebm} type="video/webm" />
 						<img
@@ -70,18 +64,10 @@ const Features = (props) => {
 							style={{width: "100%", height: "100%", objectFit: "cover"}}
 						/>
 					</video>
-
-					<video
-						className="mobile-video"
-						ref={timeControlledMobileRef}
-						poster={timeControlledMobileImage}
-						autoPlay
-						loop
-						playsInline
-						muted
-					>
+					<video className="mobile-video" preload autoPlay loop playsInline muted>
 						<source src={timeControlledMobile} type="video/mp4" />
-						{/* <source src={timeControlledMobileWebm} type="video/webm" /> */}
+						<source src={timeControlledMobileWebm} type="video/webm" />
+
 						<img
 							src={timeControlledMobileImage}
 							alt="mobile privacy desktop"
@@ -102,35 +88,23 @@ const Features = (props) => {
 						</p>
 					</div>
 
-					<video
-						className="desktop-video"
-						ref={mobilePrivacyDesktopRef}
-						autoPlay
-						loop
-						playsInline
-						muted
-					>
+					<video className="desktop-video" preload autoPlay loop playsInline muted>
 						<source src={mobilePrivacyDesktop} type="video/mp4" />
 						<source src={mobilePrivacyDesktopWebm} type="video/webm" />
 						<img
 							src={mobilePrivacyDesktopImage}
+							className="desktop-video"
 							alt="mobile privacy desktop"
 							style={{width: "100%", height: "100%", objectFit: "cover"}}
 						/>
 					</video>
 
-					<video
-						className="mobile-video"
-						ref={mobilePrivacyMobileRef}
-						autoPlay
-						loop
-						playsInline
-						muted
-					>
+					<video className="mobile-video" preload autoPlay loop playsInline muted>
 						<source src={mobilePrivacyMobile} type="video/mp4" />
 						<source src={mobilePrivacyMobileWebm} type="video/webm" />
 						<img
 							src={mobilePrivacyMobileImage}
+							className="mobile-video"
 							alt="mobile privacy mobile"
 							style={{width: "100%", height: "100%", objectFit: "cover"}}
 						/>

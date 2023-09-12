@@ -2,18 +2,20 @@ import "./envelope.css";
 import http1 from "../../variables";
 import {Fragment, useRef, useEffect, useState} from "react";
 import {InView} from "react-intersection-observer";
-import envelopeVideo from "../../../assets/animations/Envelope.mp4";
-import envelopeVideoVer from "../../../assets/animations/Envelope-ver.mp4";
+
+//
+import envelopeVideoDesktop from "../../../assets/animations/Envelope.mp4";
+import envelopeVideoMobile from "../../../assets/animations/Envelope-ver.mp4";
 
 // webm
-import envelopeVideoDesktop from "../../../assets/webm/envelope-desktop.webm";
-import envelopeVideoMobile from "../../../assets/webm/envelope-mobile.webm";
+import envelopeVideoDesktopWebm from "../../../assets/webm/envelope-desktop.webm";
+import envelopeVideoMobileWebm from "../../../assets/webm/envelope-mobile.webm";
 
 // fallback images
 import envelopeDesktopImage from "../../../assets/fallback_images/enevelope-desktop.png";
 import envelopeMobileImage from "../../../assets/fallback_images/enevelope-mobile.png";
 
-import {Player} from "@lottiefiles/react-lottie-player";
+// import {Player} from "@lottiefiles/react-lottie-player";
 
 // lottie files
 //import envelopeVideo from "../../../assets/lottie/privacy-solution.json";
@@ -42,7 +44,7 @@ const Envelope = (props) => {
 								<div className="video_wrap">
 									<video
 										className="img_video"
-										src={envelopeVideo}
+										src={envelopeVideoDesktop}
 										autoPlay
 										loop
 										muted
@@ -80,13 +82,25 @@ const Envelope = (props) => {
 								and smoothly
 							</p>
 						</div>
-						<video className="desktop-video" autoPlay loop playsInline muted>
-							<source src={envelopeVideo} type="video/mp4" />
-							<source src={envelopeVideoDesktop} type="video/webm" />
+						<video className="desktop-video" preload autoPlay loop playsInline muted>
+							<source src={envelopeVideoDesktop} type="video/mp4" />
+							<source src={envelopeVideoDesktopWebm} type="video/webm" />
+							<img
+								src={envelopeDesktopImage}
+								className="desktop-video"
+								alt="mobile privacy desktop"
+								style={{width: "100%", height: "100%", objectFit: "cover"}}
+							/>
 						</video>
-						<video className="mobile-video" autoPlay loop playsInline muted>
-							<source src={envelopeVideoVer} type="video/mp4" />
-							<source src={envelopeVideoMobile} type="video/webm" />
+						<video className="mobile-video" preload autoPlay loop playsInline muted>
+							<source src={envelopeVideoMobile} type="video/mp4" />
+							<source src={envelopeVideoMobileWebm} type="video/webm" />
+							<img
+								src={envelopeMobileImage}
+								className="mobile-video"
+								alt="mobile privacy mobile"
+								style={{width: "100%", height: "100%", objectFit: "cover"}}
+							/>
 						</video>
 					</div>
 				</section>
