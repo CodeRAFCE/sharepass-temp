@@ -4,12 +4,12 @@ import {Fragment, useRef, useEffect, useState} from "react";
 import {InView} from "react-intersection-observer";
 
 //
-import envelopeVideoDesktop from "../../../assets/animations/Envelope.mp4";
-import envelopeVideoMobile from "../../../assets/animations/Envelope-ver.mp4";
+import envelopeVideoDesktop from "../../../assets/videos/compressed/envolope-hor.mp4";
+import envelopeVideoMobile from "../../../assets/videos/compressed/envolope-ver.mp4";
 
 // webm
-import envelopeVideoDesktopWebm from "../../../assets/webm/envelope-desktop.webm";
-import envelopeVideoMobileWebm from "../../../assets/webm/envelope-mobile.webm";
+import envelopeVideoDesktopWebm from "../../../assets/webm/envolope-hor.webm";
+import envelopeVideoMobileWebm from "../../../assets/webm/envolope-ver.webm";
 
 // fallback images
 import envelopeDesktopImage from "../../../assets/fallback_images/enevelope-desktop.png";

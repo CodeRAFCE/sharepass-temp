@@ -17,12 +17,14 @@ import mobilePrivacyMobile from "../../../assets/animations/Mobile-Privacy-ver.m
 // Import webm versions if available
 import timeControlledDesktopWebm from "../../../assets/webm/time-controlled-hor.webm";
 import timeControlledMobileWebm from "../../../assets/webm/time-controlled-ver.webm";
+
 import mobilePrivacyDesktopWebm from "../../../assets/webm/mobile-privacy-desktop.webm";
 import mobilePrivacyMobileWebm from "../../../assets/webm/mobile-privacy-mobile.webm";
 
 // fallback images
 import timeControlledDesktopImage from "../../../assets/fallback_images/time-controlled-desktop.png";
 import timeControlledMobileImage from "../../../assets/fallback_images/time-controlled-mobile.png";
+
 import mobilePrivacyDesktopImage from "../../../assets/fallback_images/mobile-privacy-desktop.png";
 import mobilePrivacyMobileImage from "../../../assets/fallback_images/mobile-privacy-mobile.png";
 
