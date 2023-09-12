@@ -82,25 +82,27 @@ const Envelope = (props) => {
 								and smoothly
 							</p>
 						</div>
-						<video className="desktop-video" preload autoPlay loop playsInline muted>
+						<video
+							className="desktop-video"
+							poster={envelopeDesktopImage}
+							autoPlay
+							loop
+							playsInline
+							muted
+						>
 							<source src={envelopeVideoDesktop} type="video/mp4" />
 							<source src={envelopeVideoDesktopWebm} type="video/webm" />
-							<img
-								src={envelopeDesktopImage}
-								className="desktop-video"
-								alt="mobile privacy desktop"
-								style={{width: "100%", height: "100%", objectFit: "cover"}}
-							/>
 						</video>
-						<video className="mobile-video" preload autoPlay loop playsInline muted>
+						<video
+							className="mobile-video"
+							poster={envelopeMobileImage}
+							autoPlay
+							loop
+							playsInline
+							muted
+						>
 							<source src={envelopeVideoMobile} type="video/mp4" />
 							<source src={envelopeVideoMobileWebm} type="video/webm" />
-							<img
-								src={envelopeMobileImage}
-								className="mobile-video"
-								alt="mobile privacy mobile"
-								style={{width: "100%", height: "100%", objectFit: "cover"}}
-							/>
 						</video>
 					</div>
 				</section>

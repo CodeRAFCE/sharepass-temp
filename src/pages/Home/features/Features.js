@@ -56,7 +56,14 @@ const Features = (props) => {
 							superior user experience.
 						</p>
 					</div>
-					<video className="desktop-video" preload autoPlay loop playsInline muted>
+					<video
+						className="desktop-video"
+						poster={timeControlledDesktopImage}
+						autoPlay
+						loop
+						playsInline
+						muted
+					>
 						<source src={timeControlledDesktop} type="video/mp4" />
 						<source src={timeControlledDesktopWebm} type="video/webm" />
 						<img
@@ -66,16 +73,16 @@ const Features = (props) => {
 							style={{width: "100%", height: "100%", objectFit: "cover"}}
 						/>
 					</video>
-					<video className="mobile-video" preload autoPlay loop playsInline muted>
+					<video
+						className="mobile-video"
+						poster={timeControlledMobileImage}
+						autoPlay
+						loop
+						playsInline
+						muted
+					>
 						<source src={timeControlledMobile} type="video/mp4" />
 						<source src={timeControlledMobileWebm} type="video/webm" />
-
-						<img
-							src={timeControlledMobileImage}
-							alt="mobile privacy desktop"
-							className="desktop-video"
-							style={{width: "100%", height: "100%", objectFit: "cover"}}
-						/>
 					</video>
 				</div>
 			</section>
@@ -90,26 +97,28 @@ const Features = (props) => {
 						</p>
 					</div>
 
-					<video className="desktop-video" preload autoPlay loop playsInline muted>
+					<video
+						className="desktop-video"
+						poster={mobilePrivacyDesktopImage}
+						autoPlay
+						loop
+						playsInline
+						muted
+					>
 						<source src={mobilePrivacyDesktop} type="video/mp4" />
 						<source src={mobilePrivacyDesktopWebm} type="video/webm" />
-						<img
-							src={mobilePrivacyDesktopImage}
-							className="desktop-video"
-							alt="mobile privacy desktop"
-							style={{width: "100%", height: "100%", objectFit: "cover"}}
-						/>
 					</video>
 
-					<video className="mobile-video" preload autoPlay loop playsInline muted>
+					<video
+						className="mobile-video"
+						poster={mobilePrivacyMobileImage}
+						autoPlay
+						loop
+						playsInline
+						muted
+					>
 						<source src={mobilePrivacyMobile} type="video/mp4" />
 						<source src={mobilePrivacyMobileWebm} type="video/webm" />
-						<img
-							src={mobilePrivacyMobileImage}
-							className="mobile-video"
-							alt="mobile privacy mobile"
-							style={{width: "100%", height: "100%", objectFit: "cover"}}
-						/>
 					</video>
 				</div>
 			</section>
