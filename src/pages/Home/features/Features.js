@@ -8,8 +8,8 @@ import {InView} from "react-intersection-observer";
 import {Player} from "@lottiefiles/react-lottie-player";
 
 // Import your videos
-import timeControlledDesktop from "../../../assets/videos/compressed/time-controlled-hor.mp4";
-import timeControlledMobile from "../../../assets/videos/compressed/time-controlled-ver.mp4";
+import timeControlledDesktop from "../../../assets/animations/Time-Controlled-Secrets.mp4";
+import timeControlledMobile from "../../../assets/animations/Time-Controlled-Secrets-ver.mp4";
 
 import mobilePrivacyDesktop from "../../../assets/animations/Mobile-Privacy.mp4";
 import mobilePrivacyMobile from "../../../assets/animations/Mobile-Privacy-ver.mp4";
